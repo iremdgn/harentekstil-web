@@ -14,3 +14,24 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* Header */
+
+ .navbar a {
+   font-family: 'Cormorant SC', serif;
+   letter-spacing: 8px;
+   font-weight: 500;
+ }
+
+ .nav a {
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
+  font-weight: 300;
+  letter-spacing: 2.7px;
+ }
+  
+ .nav a:hover{
+  color: #F7A945;
+  font-weight: 500;
+ }
+
