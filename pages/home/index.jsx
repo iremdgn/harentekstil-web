@@ -1,11 +1,11 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import HomePageSlider from '/src/components/HomePageSlider';
 
-function HomePage () {
+
+function HomePage() {
     return (
         <>
-            <h1>Burası anasayfa</h1>
-            <Button>Gönder</Button>
+            <HomePageSlider />
         </>
     );
 }
