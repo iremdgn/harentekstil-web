@@ -1,13 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import SwiperSlider from './swiperSlider';
-import Image from 'next/image'
 
 
 function HomePageSlider() {
   return (
     <>
-      <Row className="homepage-slider">
+      <Row className="homepage-slider mt-3">
         <Col className="d-flex justify-content-start">
           <div>
           <hr className="line"></hr>
