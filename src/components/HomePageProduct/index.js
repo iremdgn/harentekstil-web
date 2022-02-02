@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductCard from './productCard'
+import ProductService from './productService';
 import { Container, Row, Col } from 'react-bootstrap'
 
 function HomePageProduct() {
@@ -15,6 +16,8 @@ function HomePageProduct() {
                     </Col>
                 </Row>
             </Container>
+
+            <ProductService />
 
         </>
     );

@@ -21,7 +21,7 @@ function HomePageSlider() {
            
           </div>
         </Col>
-        <Col className="justify-content-end" style={{ backgroundImage: "url('/assets/images/homepage2.jpg')"}}>
+        <Col className="d-flex justify-content-end" style={{ backgroundImage: "url('/assets/images/homepage2.jpg')"}}>
 
         </Col>
       </Row>

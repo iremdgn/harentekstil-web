@@ -78,6 +78,24 @@ a {
 
  /* Home Page Product */
 
+ .product-card .card {
+  width: 550px;
+  height: 550px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 0;
+  border: none;
+ }
+
+ .product-card .card-img {
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+ }
+
  .product-card .card-img-overlay {
    background-color: #FFFFFF;
    height: 10vh;
@@ -99,20 +117,49 @@ a {
   display: none;
 }
 
-.product-card .card-img-overlay:hover{
+.product-card:hover .card-img-overlay{
   background-color: #000000;
   height: 20vh;
-  width: 35vh;
+  width: 30vh;
   color: #FFFFFF;
   top: 68%;
   transition: 0.4s;
 }
 
-.product-card .card-img-overlay:hover .card-text {
+.product-card:hover .card-text {
    display: block;
    color: #FFFFFF;
 }
 
+.product-card:hover .card-img {
+   transform: scale(1.2);
+}
 
+ /* Product & Service*/
 
+ .product-service {
+   background-color: #F6F6F4;
+   height: 60vh;
+ }
 
+ .product-service .text-area {
+   width: 85%;
+ }
+
+ .product-service .mini-title {
+   font-family: 'Qwitcher Grypen', cursive;
+   font-size: 4rem;
+ }
+
+ .product-service h1, .product-service .service-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.product-service .area-left .text-area {
+  padding: 5rem 0 5rem 25rem;
+}
+
+.product-service .area-right .text-area {
+  padding: 5rem 20rem 5rem 7rem;
+}
