@@ -20,22 +20,22 @@ function SwiperSlider() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage.jpg" with="100" height="100" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/homepage.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage2.jpg" with="100" height="100" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/homepage2.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage3.jpg" with="100" height="100" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/homepage3.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage.jpg" with="100" height="100" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/homepage.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage2.jpg" with="100" height="100" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/homepage2.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage3.jpg" with="100" height="100" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/homepage3.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
             </Swiper>
         </>

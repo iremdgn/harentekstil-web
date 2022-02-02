@@ -75,3 +75,44 @@ a {
   height: 100%;
   object-fit: cover;
 }
+
+ /* Home Page Product */
+
+ .product-card .card-img-overlay {
+   background-color: #FFFFFF;
+   height: 10vh;
+   width: 25vh;
+   border-radius: 0;
+   position: absolute;
+   top: 86.1%;
+ }
+
+ .product-card .card-title {
+   font-family: 'DM Serif Display', serif;
+   font-weight: 500;
+   font-size: 2.5rem;
+ }
+
+ .product-card .card-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  display: none;
+}
+
+.product-card .card-img-overlay:hover{
+  background-color: #000000;
+  height: 20vh;
+  width: 35vh;
+  color: #FFFFFF;
+  top: 68%;
+  transition: 0.4s;
+}
+
+.product-card .card-img-overlay:hover .card-text {
+   display: block;
+   color: #FFFFFF;
+}
+
+
+
+
