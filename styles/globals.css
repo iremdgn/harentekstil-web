@@ -138,12 +138,7 @@ a {
  /* Product & Service*/
 
  .product-service {
-   background-color: #F6F6F4;
    height: 60vh;
- }
-
- .product-service .text-area {
-   width: 85%;
  }
 
  .product-service .mini-title {
@@ -156,10 +151,47 @@ a {
   font-weight: 300;
 }
 
+.product-service .text-area {
+  width: 85%;
+}
+
 .product-service .area-left .text-area {
   padding: 5rem 0 5rem 25rem;
 }
 
+.product-service .area-left {
+  background-color: #F6F6F4;
+}
+
 .product-service .area-right .text-area {
   padding: 5rem 20rem 5rem 7rem;
+}
+
+
+ /* Home Page Contact */ 
+
+.homepage-contact {
+  background-color: #F6F6F4;
+}
+
+.homepage-contact h4 {
+   font-family: 'DM Serif Display', serif;
+   font-weight: 500;
+}
+
+.homepage-contact p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.homepage-contact button {
+  background-color: #0f10024d;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.homepage-contact button:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
