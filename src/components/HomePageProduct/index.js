@@ -1,7 +1,6 @@
 import React from 'react'
 import ProductCard from './productCard'
-import ProductService from './productService';
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 function HomePageProduct() {
     return (
@@ -9,29 +8,23 @@ function HomePageProduct() {
             <Container className="p-5">
                 <Row className="p-5">
                     <Col>
-                        <ProductCard />
+                        <ProductCard 
+                        src="/assets/images/product.jpg" 
+                        alt="Card image" 
+                        title="Kumaşlar" 
+                        text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."                           
+                        />
                     </Col>
                     <Col>
-                        <ProductCard />
+                        <ProductCard 
+                        src="/assets/images/product.jpg" 
+                        alt="Card image"
+                        title="Kumaşlar" 
+                        text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur." 
+                        />
                     </Col>
                 </Row>
             </Container>
-
-            <ProductService />
-
-            <div className="homepage-contact">
-                <Container className="p-5">
-                    <Row className="p-5">
-                        <Col>
-                            <h4>Bizimle İletişime Geçebilirsiniz</h4>
-                            <p className="pt-2">En son modellerimiz, ürün güncellemelerimiz ve daha fazlası hakkında bilgi almak için bizi arayın.</p>
-                        </Col>
-                        <Col className="d-flex justify-content-center">
-                            <Button className="rounded-0 border-0 my-5 px-5" size="lg" type="submit">Bize Ulaşın</Button>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
 
         </>
     );
