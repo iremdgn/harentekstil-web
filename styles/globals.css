@@ -195,3 +195,111 @@ a {
   background-color: #000000;
   color: #ffffff;
 }
+
+ /* Home Page Visual Card  */ 
+
+ .home-visual .row>* {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+ }
+
+ .visual-card .card {
+  width: 85vh;
+  height: 37vh;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 0;
+  border: none;
+ }
+
+ .visual-card .card-img {
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+ }
+
+ .visual-card .card-img-overlay {
+   background-color: #FFFFFF;
+   height: 7vh;
+   width: 23vh;
+   border-radius: 0;
+   position: absolute;
+   top: 87%;
+ }
+
+ .visual-card .card-title {
+   font-family: 'DM Serif Display', serif;
+   font-weight: 500;
+   font-size: 1.6rem;
+   line-height: 0.95rem;
+   letter-spacing: 0.1rem;
+ }
+
+ .visual-card .card-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  display: none;
+}
+
+.visual-card:hover .card-img-overlay{
+  height: 70vh;
+  width: 30vh;
+  top: 38%;
+  transition: 0.4s;
+  padding-top: 2.5rem;
+}
+
+.visual-card:hover .card-text {
+   display: block;
+}
+
+.visual-card:hover .card-img {
+   transform: scale(1.2);
+}
+
+.visual-card-large .card {
+  overflow: hidden;
+  border-radius: 0;
+  border: none;
+ }
+
+ .visual-card-large .card-img {
+  height: 74vh !important;
+  transition: all 0.3s;
+  display: block;
+  transform: scale(1);
+ }
+
+ .visual-card-large .card-img-overlay {
+   padding: 2rem 5rem 5rem 17rem;
+   background-color: #FFFFFF;
+   height: 25vh;
+   width: 75vh;
+   border-radius: 0;
+   position: absolute;
+   top: 67%;
+ }
+
+ .visual-card-large .card-title {
+   font-family: 'DM Serif Display', serif;
+   font-weight: 500;
+   font-size: 2rem;
+ }
+
+ .visual-card-large .card-text {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 300;
+}
+
+.visual-card-large:hover .card-img {
+   transform: scale(1.2);
+}
+
+.visual-card-large button {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500 !important;
+   letter-spacing: 0.1rem;
+}

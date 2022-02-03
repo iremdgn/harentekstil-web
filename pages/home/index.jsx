@@ -3,6 +3,7 @@ import HomePageSlider from '/src/components/HomePageSlider'
 import HomePageProduct from '/src/components/HomePageProduct'
 import ProductService from '/src/components/ProductService'
 import HomePageContact from '/src/components/homePageContact'
+import HomeVisualCard from '/src/components/HomeVisualCard'
 
 
 function HomePage() {
@@ -12,6 +13,7 @@ function HomePage() {
             <HomePageProduct />
             <ProductService />
             <HomePageContact />
+            <HomeVisualCard />
         </>
     );
 }
