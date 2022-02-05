@@ -437,7 +437,7 @@ a {
 
 .product-slider .swiper {
    width: 65%;
-   height: 40vh;
+   height: 24vh;
 }
 
 .product-slider .card {
@@ -453,7 +453,6 @@ a {
    font-size: 1.15rem;
 }
 
-
 .product-slider .card:hover {
   box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 25px 0px;
 }
@@ -463,6 +462,33 @@ a {
   top: -10px;
 }
 
- /* Sw.product-slider .swiper-slide img {
-   object-fit: cover;
- } */
+ /* Banner */
+
+ .banner {
+   background-color: #F7A945;
+   height: 90vh;
+ }
+
+ .banner .banner-area {
+   height: 65%;
+   width: 65%;
+   background-color: #F6F6F4;
+ }
+
+ .banner .text-area {
+   padding: 5rem 7rem;
+
+ }
+
+ .banner .banner-text h1 {
+   font-family: 'DM Serif Display', serif;
+   font-size: 3rem;
+ }
+
+ .banner .banner-text p {
+   font-family: 'Poppins', sans-serif;
+   font-size: 1.5;
+   font-weight: 300;
+ }
+
+
