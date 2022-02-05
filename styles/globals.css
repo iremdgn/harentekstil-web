@@ -355,7 +355,7 @@ a {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   display: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .product-card-bottom:hover .product-card-bottom-overlay {
@@ -427,3 +427,42 @@ a {
    letter-spacing: 0.1rem;
    font-size: 0.7rem;
 }
+
+/* Product Page Slider */
+
+.product-slider {
+  background-color: #F6F6F4;
+  height: 25vh;
+}
+
+.product-slider .swiper {
+   width: 65%;
+   height: 40vh;
+}
+
+.product-slider .card {
+  border-radius: 0 !important;
+  border: none;
+  background-color: #F6F6F4;
+  height: 18vh;
+}
+
+.product-slider .card-title {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 300;
+   font-size: 1.15rem;
+}
+
+
+.product-slider .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 25px 0px;
+}
+
+.product-slider .swiper-slide:hover {
+  position: relative;
+  top: -10px;
+}
+
+ /* Sw.product-slider .swiper-slide img {
+   object-fit: cover;
+ } */
