@@ -6,7 +6,7 @@ import VisualCardLarge from './visualCardLarge'
 function HomeVisualCard() {
     return (
         <div className="home-visual">
-            <Row className="">
+            <Row>
                 <Col sm={7}>
                     <VisualCardLarge 
                         srcVisual="/assets/images/visualcard3.jpg" 

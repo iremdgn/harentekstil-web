@@ -5,7 +5,7 @@ import ProductService from '/src/components/ProductService'
 import HomePageContact from '/src/components/homePageContact'
 import HomeVisualCard from '/src/components/HomeVisualCard'
 import HomeSliderBottom from '../../src/components/HomeSilderBottom'
-
+import HomePageProductBottom from '/src/components/HomePageProductBottom'
 
 function HomePage() {
     return (
@@ -23,8 +23,11 @@ function HomePage() {
                 text="Üstün ürünler sunma tutkumuz, bu ürünlerin performansıyla örtüşmektedir. Solmaya, yıpranmaya ve küflenmeye karşı dayanıklı, bakımı kolay ve teknik olarak üstün kumaşlarla olağanüstü mekanlar tasarlamak bizim işimiz."
                 serviceClass="d-flex flex-row-reverse" />
             <HomePageContact />
+
             <HomeVisualCard />
-            <HomePageProduct />
+
+            <HomePageProductBottom />
+            
             <HomeSliderBottom />
         </>
     );

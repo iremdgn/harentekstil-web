@@ -1,24 +1,25 @@
 import React from 'react';
 import { Card } from 'react-bootstrap'
 
-function ProductCard(props) {
+function ProductCardBottom(props) {
     return (
         <>
-            <div className="product-card position-relative">
+            <div className="product-card-bottom">
                 <Card>
                     <Card.Img src={props.src} alt={props.alt} />
-                    <div className="product-card-overlay">
+                    <div className="product-card-bottom-overlay">
                         <Card.ImgOverlay>
-                            <Card.Title className="ps-3">{props.title}</Card.Title>
-                            <Card.Text className="ps-3">
+                            <Card.Title className="ps-2">{props.title}</Card.Title>
+                            <Card.Text className="ps-2">
                                 {props.text}
                             </Card.Text>
                         </Card.ImgOverlay>
                     </div>
+
                 </Card>
             </div>
         </>
     );
 }
 
-export default ProductCard;
+export default ProductCardBottom;
