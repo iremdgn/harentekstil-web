@@ -4,7 +4,7 @@ import HomePageProduct from '/src/components/HomePageProduct'
 import ProductService from '/src/components/ProductService'
 import HomePageContact from '/src/components/homePageContact'
 import HomeVisualCard from '/src/components/HomeVisualCard'
-import HomeSliderBottom from '../../src/components/HomeSilderBottom'
+import HomeSliderBottom from '../../src/components/HomeSliderBottom'
 import HomePageProductBottom from '/src/components/HomePageProductBottom'
 
 function HomePage() {
