@@ -20,22 +20,19 @@ function SwiperSlider() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage.jpg" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/slider.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage2.jpg" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/slider2.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage3.jpg" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/slider3.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage.jpg" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/slider4.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/homepage2.jpg" alt="slider1" layout='fill' />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src="/assets/images/homepage3.jpg" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/slider5.jpg" alt="slider1" layout='fill' />
                 </SwiperSlide>
             </Swiper>
         </>
