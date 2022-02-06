@@ -1,12 +1,11 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap'
-import Image from 'next/image'
 import BannerText from './BannerText'
 
 function Banner(props) {
     return (
         <div className="banner d-flex justify-content-center align-items-center">
-            <Row className="banner-area">
+            <Row className={"banner-area " + props.bannerClass}>
                 <Col className="banner-text">
                     <BannerText
                         title={props.title}

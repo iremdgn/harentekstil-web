@@ -465,7 +465,7 @@ a {
  /* Banner */
 
  .banner {
-   background-color: #F7A945;
+   background-color: #FFFFFF;
    height: 90vh;
  }
 
@@ -491,4 +491,34 @@ a {
    font-weight: 300;
  }
 
+/* Jumbotron */
 
+.jumbotron {
+  background-color: #F7A945;
+  height: 55vh;
+}
+
+.jumbotron .jumbotron-text  {
+  margin-left: 15rem;
+  padding: 7rem 5rem !important;
+}
+
+.jumbotron hr {
+  border-top: 2px solid #FFFFFF;
+  width: 18rem;
+  position: relative;
+  top: 32%;
+}
+
+.jumbotron .text-area h1 {
+  color: #F6F6F4;
+  font-family: 'DM Serif Display', serif;
+  font-size: 4rem;
+}
+
+.jumbotron .text-area p {
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25;
+  font-weight: 300;
+}
