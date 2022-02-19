@@ -15,6 +15,9 @@ function Menu() {
                     <Nav.Link  href="/about" eventKey="link-3">HAKKIMIZDA</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
+                    <Nav.Link  href="/blog" eventKey="link-3">BLOG</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
                     <Nav.Link  href="/contact" eventKey="link-4">İLETİŞİM</Nav.Link>
                 </Nav.Item>
             </Nav>
