@@ -27,7 +27,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Marin Havlu</Card.Title>
+                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -35,7 +35,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Marin Havlu</Card.Title>
+                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -43,7 +43,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Marin Havlu</Card.Title>
+                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -51,7 +51,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Marin Havlu</Card.Title>
+                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -59,7 +59,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Marin Havlu</Card.Title>
+                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -67,7 +67,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Marin Havlu</Card.Title>
+                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -75,7 +75,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Marin Havlu</Card.Title>
+                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -83,7 +83,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Marin Havlu</Card.Title>
+                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>

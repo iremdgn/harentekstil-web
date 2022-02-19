@@ -23,7 +23,7 @@ function HomeVisualCard() {
                         textVisual="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."  
                     />
                     <VisualCard 
-                        srcVisual="/assets/images/visualcard2.jpg" 
+                        srcVisual="/assets/images/slider4.jpg" 
                         altVisual="Card image" 
                         titleVisual="Kumaşlar" 
                         textVisual="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."  

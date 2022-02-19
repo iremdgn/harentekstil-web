@@ -12,8 +12,11 @@ function ProductPage() {
                 imageUrl="/assets/images/homepage2.jpg"
                 title="Üstün Performanslı Ürünler"
                 text="Üstün ürünler sunma tutkumuz, bu ürünlerin performansıyla örtüşmektedir. Solmaya, yıpranmaya ve küflenmeye karşı dayanıklı, bakımı kolay ve teknik olarak üstün kumaşlarla olağanüstü mekanlar tasarlamak bizim işimiz."
+                bgColor="#F7A945"
             />
+            
             <Products />
+            
             <HomeSliderBottom />
         </>
     );

@@ -9,7 +9,7 @@ function Products() {
                 <Row className="p-5">
                     <Col>
                         <ProductCard 
-                        src="/assets/images/product.jpg" 
+                        src="/assets/images/product.png" 
                         alt="Card image" 
                         title="Kumaşlar" 
                         text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."                           
@@ -17,7 +17,7 @@ function Products() {
                     </Col>
                     <Col>
                         <ProductCard 
-                        src="/assets/images/product.jpg" 
+                        src="/assets/images/product.png" 
                         alt="Card image"
                         title="Kumaşlar" 
                         text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur." 
@@ -27,7 +27,7 @@ function Products() {
                 <Row className="p-5">
                     <Col>
                         <ProductCard 
-                        src="/assets/images/product.jpg" 
+                        src="/assets/images/product.png" 
                         alt="Card image" 
                         title="Kumaşlar" 
                         text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."                           
@@ -35,7 +35,7 @@ function Products() {
                     </Col>
                     <Col>
                         <ProductCard 
-                        src="/assets/images/product.jpg" 
+                        src="/assets/images/product.png" 
                         alt="Card image"
                         title="Kumaşlar" 
                         text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur." 
@@ -45,7 +45,7 @@ function Products() {
                 <Row className="p-5">
                     <Col>
                         <ProductCard 
-                        src="/assets/images/product.jpg" 
+                        src="/assets/images/product.png" 
                         alt="Card image" 
                         title="Kumaşlar" 
                         text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."                           
@@ -53,7 +53,7 @@ function Products() {
                     </Col>
                     <Col>
                         <ProductCard 
-                        src="/assets/images/product.jpg" 
+                        src="/assets/images/product.png" 
                         alt="Card image"
                         title="Kumaşlar" 
                         text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur." 

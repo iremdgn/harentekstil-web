@@ -6,16 +6,16 @@ function Menu() {
         <>
             <Nav className="justify-content-center" >
                 <Nav.Item>
-                    <Nav.Link eventKey="link-1">ÜRÜNLERİMİZ</Nav.Link>
+                    <Nav.Link  href="/home" eventKey="link-1">ANASAYFA</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-2">KULLANIM ALANLARI</Nav.Link>
+                    <Nav.Link  href="/products" eventKey="link-2">ÜRÜNLERİMİZ</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-3">HAKKIMIZDA</Nav.Link>
+                    <Nav.Link  href="/about" eventKey="link-3">HAKKIMIZDA</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-4">İLETİŞİM</Nav.Link>
+                    <Nav.Link  href="/contact" eventKey="link-4">İLETİŞİM</Nav.Link>
                 </Nav.Item>
             </Nav>
         </>
