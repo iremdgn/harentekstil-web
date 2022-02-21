@@ -9,7 +9,6 @@ function AboutPage() {
         <>
             <Jumbotron
                 imageUrl="/assets/images/homepage2.jpg"
-                miniTitle="HAKKIMIZDA"
                 title="Biz Kimiz?"
                 text="Üstün ürünler sunma tutkumuz, bu ürünlerin performansıyla örtüşmektedir. Solmaya, yıpranmaya ve küflenmeye karşı dayanıklı, bakımı kolay ve teknik olarak üstün kumaşlarla olağanüstü mekanlar tasarlamak bizim işimiz."
             />  

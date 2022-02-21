@@ -606,7 +606,7 @@ a {
   color: #797575;
 }
 
-/* Other Products Slider */
+/** Other Products Slider **/
 
 .other-products {
   background-color: #F6F6F4;
@@ -630,16 +630,46 @@ a {
 }
 
  .other-products .swiper-slide .card {
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
+   width: 400px;
+   height: 400px;
+   overflow: hidden;
 
 }
 
+.other-products .swiper-slide .card-img {
+   display: block;
+   width: 400px;
+   height: 400px;
+}
 
-  
-   .other-products .swiper-slide .card-img {
-    display: block;
-    width: 400px;
-    height: 400px;
-   }
+/* Blog Page */
+
+.blog .blog-text h1 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.blog .blog-text p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.blog .blog-text button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #FAB141;
+  border: none;
+  border-radius: 0;
+  width: 50%;
+  letter-spacing: 0.1rem;
+}
+
+.blog .blog-text button a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.blog .blog-text button:hover{
+  background-color: #000000;
+}

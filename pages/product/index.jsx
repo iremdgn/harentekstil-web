@@ -1,5 +1,4 @@
 import React from 'react'
-import Jumbotron from '/src/components/Jumbotron'
 import SingleProduct from '/src/components/SingleProduct'
 
 function Product() {
