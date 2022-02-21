@@ -14,7 +14,7 @@ function Blog(props) {
                         <div className="ps-1 ms-4 blog-text">
                             <h1>{props.title}</h1>
                             <p className="pt-3">{props.text}</p>
-                            <Button className="py-2 mt-3"><a className="blog-button">Okumaya Devam Et</a></Button>
+                            <Button className={"py-2 mt-3 " + props.buttonClass}><a className="blog-button">Okumaya Devam Et</a></Button>
                         </div>
                     </Col>
                 </Row>

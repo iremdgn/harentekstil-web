@@ -3,12 +3,12 @@ import Jumbotron from '/src/components/Jumbotron'
 import Blog from '/src/components/Blog'
 import BottomBanner from '/src/components/Blog/bottomBanner'
 
-function Product() {
+function BlogPage() {
     return (
         <>
             <Jumbotron
                 imageUrl="/assets/images/homepage2.jpg"
-                title="Blog"
+                title="BlogPage"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit tortor, facilisis sed sapien sed, ultrices pellentesque erat. "
             />
 
@@ -36,4 +36,4 @@ function Product() {
     );
 }
 
-export default Product;
+export default BlogPage;
