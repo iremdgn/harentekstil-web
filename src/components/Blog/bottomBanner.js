@@ -8,7 +8,7 @@ function BottomBanner() {
             <div className="text-area">
                 <h1>Daha Fazla Bilgiye Mi İhtiyacınız Var?</h1>
                 <p className="py-2">Haren Tekstil ürünleri hakkında daha fazla bilgiye ihtiyacınız varsa bize ulaşabilirsiniz.</p>
-                <Button className="py-2">Bize Ulaşın</Button>
+                <Button className="py-2"><a href="contact">Bize Ulaşın!</a></Button>
             </div>
         </div>
     );

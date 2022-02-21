@@ -704,16 +704,23 @@ a {
   font-weight: 500;
   background-color: #F6F6F4;
   border: 1px solid #000000;
-  color: #000000;
   border-radius: 0;
   width: 40%;
+}
+
+.bottom-banner .text-area button a {
+  color: #000000;
   letter-spacing: 0.1rem;
+  text-decoration: none;
 }
 
 
 .bottom-banner .text-area button:hover {
-  background-color: #F6F6F4;
-  border: 1px solid #F7A945;
-  color: #F7A945;
+  background-color: #000000;
+  color: #F6F6F4;
 }
 
+
+.bottom-banner .text-area button a:hover {
+  color: #F6F6F4;
+}
