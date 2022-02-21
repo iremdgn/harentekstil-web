@@ -28,16 +28,16 @@ function ProductSlider() {
                 className="swiper-container gallery-top"
             >
                 <SwiperSlide>
-                     <Image src="/assets/images/slider.jpg" alt="slider1" layout='fill' />
+                     <Image src="/assets/images/product.png" alt="product1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/slider2.jpg" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/product.png" alt="product1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                     <Image src="/assets/images/slider3.jpg" alt="slider1" layout='fill' />
+                     <Image src="/assets/images/product.png" alt="product1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                     <Image src="/assets/images/slider4.jpg" alt="slider1" layout='fill' />
+                     <Image src="/assets/images/product.png" alt="product1" layout='fill' />
                 </SwiperSlide>
             </Swiper>
             <Swiper
@@ -50,16 +50,16 @@ function ProductSlider() {
                 className="swiper-container gallery-thumbs mt-3"
             >
                 <SwiperSlide>
-                     <Image src="/assets/images/slider.jpg" alt="slider1" layout='fill' />
+                     <Image src="/assets/images/product.png" alt="product1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src="/assets/images/slider2.jpg" alt="slider1" layout='fill' />
+                    <Image src="/assets/images/product.png" alt="product1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                     <Image src="/assets/images/slider3.jpg" alt="slider1" layout='fill' />
+                     <Image src="/assets/images/product.png" alt="product1" layout='fill' />
                 </SwiperSlide>
                 <SwiperSlide>
-                     <Image src="/assets/images/slider4.jpg" alt="slider1" layout='fill' />
+                     <Image src="/assets/images/product.png" alt="product1" layout='fill' />
                 </SwiperSlide>
 
             </Swiper>
