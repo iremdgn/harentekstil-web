@@ -19,7 +19,6 @@ function Blog(props) {
                     </Col>
                 </Row>
             </Container>
-
         </>
     );
 }

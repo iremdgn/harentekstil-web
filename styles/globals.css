@@ -658,7 +658,7 @@ a {
 .blog .blog-text button {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  background-color: #FAB141;
+  background-color: #F7A945;
   border: none;
   border-radius: 0;
   width: 50%;
@@ -673,3 +673,47 @@ a {
 .blog .blog-text button:hover{
   background-color: #000000;
 }
+
+/** Bottom Banner **/
+
+.bottom-banner {
+  height: 70vh;
+}
+
+.bottom-banner .text-area {
+  background-color: #F6F6F4;
+  width: 80vh;
+  height: 40vh;
+  padding: 5rem 7rem;
+  text-align: center;
+}
+
+.bottom-banner .text-area h1 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.bottom-banner .text-area p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.bottom-banner .text-area button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #F6F6F4;
+  border: 1px solid #000000;
+  color: #000000;
+  border-radius: 0;
+  width: 40%;
+  letter-spacing: 0.1rem;
+}
+
+
+.bottom-banner .text-area button:hover {
+  background-color: #F6F6F4;
+  border: 1px solid #F7A945;
+  color: #F7A945;
+}
+
