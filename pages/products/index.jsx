@@ -4,7 +4,7 @@ import Products from '/src/components/Products'
 import Banner from '/src/components/Banner'
 import HomeSliderBottom from '../../src/components/HomeSliderBottom'
 
-function ProductPage() {
+function ProductsPage() {
     return (
         <>
             <ProductPageSlider />
@@ -22,4 +22,4 @@ function ProductPage() {
     );
 }
 
-export default ProductPage;
+export default ProductsPage;

@@ -1,8 +1,8 @@
 import React from 'react'
 import Jumbotron from '/src/components/Jumbotron'
+import SingleProduct from '/src/components/SingleProduct'
 
-
-function ProductListPage() {
+function Product() {
     return (
         <>
            <Jumbotron 
@@ -11,8 +11,9 @@ function ProductListPage() {
                 title="MARİN HAVLU"
                 text="Üstün ürünler sunma tutkumuz, bu ürünlerin performansıyla örtüşmektedir."
            />
+           <SingleProduct />
         </>
     );
 }
 
-export default ProductListPage;
+export default Product;
