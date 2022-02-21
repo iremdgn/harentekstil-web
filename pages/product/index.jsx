@@ -5,13 +5,11 @@ import SingleProduct from '/src/components/SingleProduct'
 function Product() {
     return (
         <>
-           <Jumbotron 
-               imageUrl="/assets/images/homepage2.jpg"
-                miniTitle="KATEGORİ"
-                title="MARİN HAVLU"
-                text="Üstün ürünler sunma tutkumuz, bu ürünlerin performansıyla örtüşmektedir."
+           <SingleProduct 
+               Title="Marin Havlu"
+               Code="Ürün Kodu"
+               Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit tortor, facilisis sed sapien sed, ultrices pellentesque erat. Donec a efficitur leo. Donec tempus nibh sed nulla sagittis, nec ornare augue placerat. Vestibulum eu arcu vitae elit dignissim varius. Vestibulum rutrum metus quis iaculis aliquam."
            />
-           <SingleProduct />
         </>
     );
 }

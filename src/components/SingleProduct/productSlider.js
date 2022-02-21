@@ -41,9 +41,9 @@ function ProductSlider() {
                 </SwiperSlide>
             </Swiper>
             <Swiper
-                spaceBetween={20}
+                spaceBetween={30}
                 onSwiper={setThumbsSwiper}
-                slidesPerView={4}
+                slidesPerView={5}
                 freeMode={true}
                 watchSlidesProgress={true}
                 modules={[FreeMode, Navigation, Thumbs]}
