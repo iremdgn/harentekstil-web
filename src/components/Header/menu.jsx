@@ -18,7 +18,7 @@ function Menu() {
                     <NavDropdown.Item className="dropdown subtitle " href="">Kategori 5</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown subtitle-image pt-4" href="/product">
                         <Image className="dropdown-image" src="/assets/images/slider3.jpg" alt="slider1" width="180" height="120" />
-                        <p className="img-text pt-2">Ürünleri İncele</p>
+                        <p className="img-text pt-2">Ürünleri İnceleyin</p>
                     </NavDropdown.Item>
 
                 </NavDropdown>
