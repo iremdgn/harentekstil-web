@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import SwiperSlider from './swiperSlider';
 
 
@@ -7,7 +7,7 @@ function HomePageSlider() {
   return (
     <>
       <Row className="homepage-slider mt-3">
-        <Col className="d-flex position-relative">
+        <Col sm={12} lg={6} className="d-flex position-relative text-area">
           <div>
             <hr className="line"></hr>
             <div className="slider-text py-2">
@@ -21,7 +21,7 @@ function HomePageSlider() {
 
           </div>
         </Col>
-        <Col style={{ backgroundImage: "url('/assets/images/homepage2.jpg')" }}>
+        <Col sm={12} lg={6} className="homepage-image" style={{ backgroundImage: "url('/assets/images/homepage2.jpg')" }}>
 
         </Col>
       </Row>

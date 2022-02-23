@@ -1,890 +1,934 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 
 /* Header */
 
- .navbar a {
-   font-family: 'Cormorant SC', serif;
-   letter-spacing: 8px;
-   font-weight: 500;
- }
+.navbar a {
+    font-family: 'Cormorant SC', serif;
+    letter-spacing: 8px;
+    font-weight: 500;
+}
 
- .nav a, .nav .nav-dropdown a {
-  font-family: 'Poppins', sans-serif;
-  color: #000000;
-  font-weight: 300;
-  letter-spacing: 2.7px;
- }
+.nav a,
+.nav .nav-dropdown a {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    font-weight: 300;
+    letter-spacing: 2.7px;
+}
 
- .nav a:hover{
-  color: #F7A945;
-  font-weight: 500;
- }
+.nav a:hover {
+    color: #F7A945;
+    font-weight: 500;
+}
 
- .nav .nav-link:focus{
-  color: #F7A945 !important;
-  font-weight: 500;
- }
+.nav .nav-link:focus {
+    color: #F7A945 !important;
+    font-weight: 500;
+}
 
- .dropdown-item:focus, .dropdown-item:hover {
-  background-color: transparent !important;
- }
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: transparent !important;
+}
 
-
- .dropdown-toggle::after {
-  display: none !important;
+.dropdown-toggle::after {
+    display: none !important;
 }
 
 .dropdown-menu {
-  border-radius: 0 !important;
-  margin-top: 0.8rem !important;
-  padding: 2.5rem 1rem !important;
-  width: 25vh;
-  border: none !important;
+    border-radius: 0 !important;
+    margin-top: 0.8rem !important;
+    padding: 2.5rem 1rem !important;
+    width: 25vh;
+    border: none !important;
 }
 
 .dropdown-menu .title {
-  letter-spacing: 2px !important;
-  font-weight: 500;
+    letter-spacing: 2px !important;
+    font-weight: 500;
 }
 
-.dropdown-menu .title:hover{
-  color: #000000;
-} 
+.dropdown-menu .title:hover {
+    color: #000000;
+}
 
 .dropdown-menu .subtitle {
-  letter-spacing: 0 !important;
-  font-size: 0.8rem;
-  padding: 10px auto;
-  color: #6e6b6b;
+    letter-spacing: 0 !important;
+    font-size: 0.8rem;
+    padding: 10px auto;
+    color: #6e6b6b;
 }
 
-.dropdown-menu .subtitle:hover{
-  color: #6e6b6b;
-  text-decoration: underline;
+.dropdown-menu .subtitle:hover {
+    color: #6e6b6b;
+    text-decoration: underline;
 }
 
 .dropdown-item .dropdown-image {
-  object-fit: cover !important;
+    object-fit: cover !important;
 }
 
 .dropdown-menu .dropdown-item .img-text {
-  letter-spacing: 1px !important;
-  font-size: 0.9rem;
-  color: #000000;
-  font-weight: 500;
-  position: relative;
-  overflow: hidden;
+    letter-spacing: 1px !important;
+    font-size: 0.9rem;
+    color: #000000;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
 }
 
 .dropdown-menu .dropdown-item .img-text::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 40%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #F7A945;
-  transform: translate3d(-100%, 0, 0);
-  transition: transform 0.3s ease;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F7A945;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.3s ease;
 }
 
 .dropdown-menu .dropdown-item .img-text:hover::before {
-  transform: translate3d(0, 0, 0);
-}
- /* Home Page Slider */
-
- .homepage-slider {
-   background-color:#F6F6F4;
-   height: 76vh;
- }
-
- .slider-text {
-   margin-left: 15rem;
- }
-
- .line {
-   border-top: 1px solid #000000;
-   width: 27%;
-   position: relative;
-   top: 11%;
- }
-
- .slider-text h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 4rem;
- }
-
- .slider-text p {
-   font-family: 'Poppins', sans-serif;
-   font-size: 1.25rem;
-   font-weight: 200;
- }
-
- .homepage-slider .swiper {
-   width: 100vh;
-   height: 35vh;
-   position: absolute;
-   bottom: 0;
+    transform: translate3d(0, 0, 0);
 }
 
- .homepage-slider .swiper-slide img {
-   display: block;
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
+
+/* Home Page Slider */
+
+.homepage-slider {
+    background-color: #F6F6F4;
+    height: 76vh;
 }
 
- /* Home Page Product */
-
- .product-card .card {
-  width: 550px;
-  height: 550px;
-  overflow: hidden;
-  margin: 0 auto;
-  border-radius: 0;
-  border: none;
- }
-
- .product-card .card-img {
-  max-width: 100%;
-  transition: all 0.3s;
-  display: block;
-  width: 550px;
-  height: 550px;
-  transform: scale(1);
- }
- 
- .product-card .card-img-overlay {
-  border-radius: 0;
-  position: relative;
+.slider-text {
+    margin-left: 15rem;
 }
 
- .product-card-overlay {
-   background-color: #FFFFFF;
-   height: 10vh;
-   width: 25vh;
-   position: absolute;
-   bottom: 0 !important;
- }
+.line {
+    border-top: 1px solid #000000;
+    width: 27%;
+    position: relative;
+    top: 11%;
+}
 
- .product-card .card-title {
-   font-family: 'DM Serif Display', serif;
-   font-weight: 500;
-   font-size: 2rem;
- }
+.slider-text h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 4rem;
+}
 
- .product-card .card-text {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  display: none;
+.slider-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 200;
+}
+
+.homepage-slider .swiper {
+    width: 100vh;
+    height: 35vh;
+    position: absolute;
+    bottom: 0;
+}
+
+.homepage-slider .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (340px <=width <=844px) {
+    .line {
+        display: none;
+    }
+    .slider-text {
+        margin-left: 0;
+    }
+    .slider-text h1 {
+        font-size: 2.5rem;
+    }
+    .slider-text p {
+        font-size: 1.1rem;
+    }
+    .homepage-slider .swiper {
+        width: 50vh;
+        height: 15vh;
+        top: 24rem;
+    }
+    .homepage-slider {
+        height: 100vh;
+    }
+    .homepage-slider .text-area {
+        height: 20vh;
+    }
+    .homepage-slider .homepage-image {
+        background-size: cover;
+    }
+}
+
+
+/* Home Page Product */
+
+.product-card .card {
+    width: 550px;
+    height: 550px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 0;
+    border: none;
+}
+
+.product-card .card-img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 550px;
+    height: 550px;
+    transform: scale(1);
+}
+
+.product-card .card-img-overlay {
+    border-radius: 0;
+    position: relative;
+}
+
+.product-card-overlay {
+    background-color: #FFFFFF;
+    height: 10vh;
+    width: 25vh;
+    position: absolute;
+    bottom: 0 !important;
+}
+
+.product-card .card-title {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.product-card .card-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    display: none;
 }
 
 .product-card:hover .product-card-overlay {
-  background-color: #000000;
-  height: 20vh;
-  width: 30vh;
-  color: #FFFFFF;
-  transition: 0.4s;
+    background-color: #000000;
+    height: 20vh;
+    width: 30vh;
+    color: #FFFFFF;
+    transition: 0.4s;
 }
 
 .product-card:hover .card-text {
-   display: block;
-   color: #FFFFFF;
+    display: block;
+    color: #FFFFFF;
 }
 
 .product-card:hover .card-img {
-   transform: scale(1.2);
+    transform: scale(1.2);
 }
 
- /* Product & Service*/
 
- .product-service {
-   height: 60vh;
- }
+/* Product & Service*/
 
- .product-service .mini-title {
-   font-family: 'Qwitcher Grypen', cursive;
-   font-size: 4rem;
- }
+.product-service {
+    height: 60vh;
+}
 
- .product-service h1, .product-service .service-text {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
+.product-service .mini-title {
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 4rem;
+}
+
+.product-service h1,
+.product-service .service-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 .product-service .text-area {
-  width: 85%;
+    width: 85%;
 }
 
 .product-service .text-area {
-  padding: 5rem 0 5rem 25rem;
+    padding: 5rem 0 5rem 25rem;
 }
 
 .product-service .product-service-area {
-  background-color: #F6F6F4;
+    background-color: #F6F6F4;
 }
 
 .product-service.flex-row-reverse .text-area {
-  padding: 5rem 20rem 5rem 7rem;
+    padding: 5rem 20rem 5rem 7rem;
 }
 
 
- /* Home Page Contact */ 
+/* Home Page Contact */
 
 .homepage-contact {
-  background-color: #F6F6F4;
+    background-color: #F6F6F4;
 }
 
 .homepage-contact h4 {
-   font-family: 'DM Serif Display', serif;
-   font-weight: 500;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
 }
 
 .homepage-contact p {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 .homepage-contact button {
-  background-color: #0f10024d;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
+    background-color: #0f10024d;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
 .homepage-contact button:hover {
-  background-color: #000000;
-  color: #ffffff;
+    background-color: #000000;
+    color: #ffffff;
 }
 
- /* Home Page Visual Card  */ 
 
- .home-visual .row>* {
+/* Home Page Visual Card  */
+
+.home-visual .row>* {
     padding-left: 0 !important;
     padding-right: 0 !important;
- }
-
- .visual-card .card {
-  width: 85vh;
-  height: 37vh;
-  overflow: hidden;
-  margin: 0 auto;
-  border-radius: 0;
-  border: none;
- }
-
- .visual-card .card-img {
-  max-width: 100%;
-  transition: all 0.3s;
-  display: block;
-  width: 100%;
-  height: auto;
-  transform: scale(1);
- }
-
- .visual-card .card-img-overlay {
-   border-radius: 0;
-   position: relative;
- }
-
- .visual-card-overlay {
-   position: absolute;
-   bottom: 0 !important;
-   background-color: #FFFFFF;
-   height: 7vh;
-   width: 23vh;
- }
-
- .visual-card .card-title {
-   font-family: 'DM Serif Display', serif;
-   font-weight: 500;
-   font-size: 1.6rem;
-   line-height: 0.95rem;
-   letter-spacing: 0.1rem;
- }
-
- .visual-card .card-text {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  display: none;
 }
 
-.visual-card:hover .visual-card-overlay{
-  height: 25vh;
-  width: 30vh;
-  transition: 0.4s;
-  padding-top: 2.5rem;
+.visual-card .card {
+    width: 85vh;
+    height: 37vh;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 0;
+    border: none;
+}
+
+.visual-card .card-img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+.visual-card .card-img-overlay {
+    border-radius: 0;
+    position: relative;
+}
+
+.visual-card-overlay {
+    position: absolute;
+    bottom: 0 !important;
+    background-color: #FFFFFF;
+    height: 7vh;
+    width: 23vh;
+}
+
+.visual-card .card-title {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 0.95rem;
+    letter-spacing: 0.1rem;
+}
+
+.visual-card .card-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    display: none;
+}
+
+.visual-card:hover .visual-card-overlay {
+    height: 25vh;
+    width: 30vh;
+    transition: 0.4s;
+    padding-top: 2.5rem;
 }
 
 .visual-card:hover .card-text {
-   display: block;
+    display: block;
 }
 
 .visual-card:hover .card-img {
-   transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .visual-card-large .card {
-  overflow: hidden;
-  border-radius: 0;
-  border: none;
- }
+    overflow: hidden;
+    border-radius: 0;
+    border: none;
+}
 
- .visual-card-large .card-img {
-  height: 74vh !important;
-  transition: all 0.3s;
-  display: block;
-  transform: scale(1);
- }
+.visual-card-large .card-img {
+    height: 74vh !important;
+    transition: all 0.3s;
+    display: block;
+    transform: scale(1);
+}
 
- .visual-card-large .card-img-overlay {
-   padding: 2rem 5rem 5rem 17rem;
-   background-color: #FFFFFF;
-   height: 25vh;
-   width: 75vh;
-   border-radius: 0;
-   position: absolute;
-   top: 67%;
- }
+.visual-card-large .card-img-overlay {
+    padding: 2rem 5rem 5rem 17rem;
+    background-color: #FFFFFF;
+    height: 25vh;
+    width: 75vh;
+    border-radius: 0;
+    position: absolute;
+    top: 67%;
+}
 
- .visual-card-large .card-title {
-   font-family: 'DM Serif Display', serif;
-   font-weight: 500;
-   font-size: 2rem;
- }
+.visual-card-large .card-title {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+    font-size: 2rem;
+}
 
- .visual-card-large .card-text {
-   font-family: 'Poppins', sans-serif;
-   font-weight: 300;
+.visual-card-large .card-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 .visual-card-large:hover .card-img {
-   transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .visual-card-large button {
-   font-family: 'Poppins', sans-serif;
-   font-weight: 500 !important;
-   letter-spacing: 0.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500 !important;
+    letter-spacing: 0.1rem;
 }
+
 
 /* Home Page Product Bottom */
 
 .product-card-bottom .card {
-  width: 550px;
-  height: 400px;
-  overflow: hidden;
-  margin: 0 auto;
-  border-radius: 0;
-  border: none;
- }
+    width: 550px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 0;
+    border: none;
+}
 
- .product-card-bottom .card-img {
-  max-width: 100%;
-  transition: all 0.3s;
-  display: block;
-  width: 100%;
-  height: auto;
-  transform: scale(1);
- }
+.product-card-bottom .card-img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
 
- .product-card-bottom .card-img-overlay {
-   border-radius: 0;
-   position: relative;
- }
+.product-card-bottom .card-img-overlay {
+    border-radius: 0;
+    position: relative;
+}
 
- .product-card-bottom-overlay {
-   background-color: #FFFFFF;
-   height: 6vh;
-   width: 18vh;
-   position: absolute;
-   bottom: 0 !important;
- }
+.product-card-bottom-overlay {
+    background-color: #FFFFFF;
+    height: 6vh;
+    width: 18vh;
+    position: absolute;
+    bottom: 0 !important;
+}
 
- .product-card-bottom .card-title {
-   font-family: 'DM Serif Display', serif;
-   font-weight: 500;
-   font-size: 1.7rem;
- }
+.product-card-bottom .card-title {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+}
 
- .product-card-bottom .card-text {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  display: none;
-  font-size: 0.95rem;
+.product-card-bottom .card-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    display: none;
+    font-size: 0.95rem;
 }
 
 .product-card-bottom:hover .product-card-bottom-overlay {
-  background-color: #000000;
-  height: 23vh;
-  width: 33vh;
-  color: #FFFFFF;
-  transition: 0.4s;
-  padding-top: 1rem;
+    background-color: #000000;
+    height: 23vh;
+    width: 33vh;
+    color: #FFFFFF;
+    transition: 0.4s;
+    padding-top: 1rem;
 }
 
 .product-card-bottom:hover .card-text {
-   display: block;
-   color: #FFFFFF;
+    display: block;
+    color: #FFFFFF;
 }
 
 .product-card-bottom:hover .card-img {
-   transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 
 /* Home Page Bottom Slider */
 
 .slider-bottom {
-  background-color: #F6F6F4;
-  height: 90vh;
+    background-color: #F6F6F4;
+    height: 90vh;
 }
 
 .slider-bottom h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 3rem;
-  letter-spacing: 0.1rem;
- }
-
- .slider-bottom hr {
-    border-top: 1px solid #000000;
-    width: 38%;
- }
-
- .slider-bottom .swiper {
-   width: 100%;
-   height: 50vh;
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
 }
 
- .slider-bottom .swiper-slide img {
-   display: block;
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
+.slider-bottom hr {
+    border-top: 1px solid #000000;
+    width: 38%;
+}
 
- }
+.slider-bottom .swiper {
+    width: 100%;
+    height: 50vh;
+}
 
- /* Footer */
+.slider-bottom .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
- .footer {
-   background-color:#000000;
- }
 
- .footer h3 {
-   color: #FFFFFF;
-   font-family: 'Cormorant SC', serif;
-   letter-spacing: 0.5rem;
-   font-weight: 600;
+/* Footer */
+
+.footer {
+    background-color: #000000;
+}
+
+.footer h3 {
+    color: #FFFFFF;
+    font-family: 'Cormorant SC', serif;
+    letter-spacing: 0.5rem;
+    font-weight: 600;
 }
 
 .footer p {
-   color: #FFFFFF;
-   font-family: 'Poppins', sans-serif;
-   letter-spacing: 0.1rem;
-   font-size: 0.7rem;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
 }
+
 
 /* Product Page Slider */
 
 .product-slider {
-  background-color: #F6F6F4;
-  height: 25vh;
+    background-color: #F6F6F4;
+    height: 25vh;
 }
 
 .product-slider .swiper {
-   width: 65%;
-   height: 24vh;
+    width: 65%;
+    height: 24vh;
 }
 
 .product-slider .card {
-  border-radius: 0 !important;
-  border: none;
-  background-color: #F6F6F4;
-  height: 18vh;
+    border-radius: 0 !important;
+    border: none;
+    background-color: #F6F6F4;
+    height: 18vh;
 }
 
 .product-slider .card-title {
-   font-family: 'Poppins', sans-serif;
-   font-weight: 300;
-   font-size: 1.15rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.15rem;
 }
 
 .product-slider .card:hover {
-  box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 25px 0px;
+    box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 25px 0px;
 }
 
 .product-slider .swiper-slide:hover {
-  position: relative;
-  top: -10px;
+    position: relative;
+    top: -10px;
 }
 
- /* Banner */
 
- .banner {
-   background-color: #FFFFFF;
-   height: 90vh;
- }
+/* Banner */
 
- .banner .banner-area {
-   height: 65%;
-   width: 65%;
-   background-color: #F6F6F4;
- }
+.banner {
+    background-color: #FFFFFF;
+    height: 90vh;
+}
 
- .banner .text-area {
-   padding: 5rem 7rem;
+.banner .banner-area {
+    height: 65%;
+    width: 65%;
+    background-color: #F6F6F4;
+}
 
- }
+.banner .text-area {
+    padding: 5rem 7rem;
+}
 
- .banner .banner-text h1 {
-   font-family: 'DM Serif Display', serif;
-   font-size: 3rem;
- }
+.banner .banner-text h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+}
 
- .banner .banner-text p {
-   font-family: 'Poppins', sans-serif;
-   font-size: 1.5;
-   font-weight: 300;
- }
+.banner .banner-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5;
+    font-weight: 300;
+}
+
 
 /* Jumbotron */
 
 .jumbotron {
-  background-color: #F7A945;
-  height: 55vh;
+    background-color: #F7A945;
+    height: 55vh;
 }
 
-.jumbotron .jumbotron-text  {
-  margin-left: 15rem;
-  padding: 7rem 5rem !important;
+.jumbotron .jumbotron-text {
+    margin-left: 15rem;
+    padding: 7rem 5rem !important;
 }
 
 .jumbotron hr {
-  border-top: 2px solid #FFFFFF;
-  width: 18rem;
-  position: relative;
-  top: 32%;
+    border-top: 2px solid #FFFFFF;
+    width: 18rem;
+    position: relative;
+    top: 32%;
 }
 
 .jumbotron .text-area h1 {
-  color: #F6F6F4;
-  font-family: 'DM Serif Display', serif;
-  font-size: 4rem;
+    color: #F6F6F4;
+    font-family: 'DM Serif Display', serif;
+    font-size: 4rem;
 }
 
 .jumbotron .text-area p {
-  color: #FFFFFF;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.25;
-  font-weight: 300;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25;
+    font-weight: 300;
 }
+
 
 /* Contact */
 
 .contact h1 {
-  font-family: 'Cormorant SC', serif;
-  font-weight: 700;
-  font-size: 3rem;
-  color: #383636
+    font-family: 'Cormorant SC', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #383636
 }
 
 .contact span {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 .contact a {
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-  color: #F7A945;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #F7A945;
 }
 
 .contact button {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #F6F6F4;
-  width: 100%;
-  background-color: #F7A945;
-  border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #F6F6F4;
+    width: 100%;
+    background-color: #F7A945;
+    border: none;
 }
 
 .contact button:hover {
-  color: #F6F6F4;
-  background-color: #000000e8;
+    color: #F6F6F4;
+    background-color: #000000e8;
 }
 
 .contact .form-control::placeholder {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.85rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
 }
+
 
 /* Single Product Page */
 
 .single-product .gallery-top {
-  height: 45vh;
-  width: 70vh;
+    height: 45vh;
+    width: 70vh;
 }
+
 .single-product .gallery-thumbs {
-  height: 100px;
-  width: 70vh;
+    height: 100px;
+    width: 70vh;
 }
 
 .single-product .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .single-product .gallery-thumbs .swiper-slide {
-  opacity: 0.4;
+    opacity: 0.4;
 }
 
 .single-product .gallery-thumbs .swiper-slide-thumb-active {
-  opacity: 1;
+    opacity: 1;
 }
 
 .single-product .product-text {
-  font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .single-product .product-text h1 {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 .single-product .product-text p {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .single-product .product-text span {
-  font-weight: 200;
-  font-size: 1.3rem;
-  color: #797575;
+    font-weight: 200;
+    font-size: 1.3rem;
+    color: #797575;
 }
+
 
 /** Other Products Slider **/
 
 .other-products {
-  background-color: #F6F6F4;
-  height: 70vh;
+    background-color: #F6F6F4;
+    height: 70vh;
 }
 
 .other-products h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 3rem;
-  letter-spacing: 0.1rem;
- }
-
- .other-products hr {
-    border-top: 1px solid #000000;
-    width: 38%;
- }
-
- .other-products .swiper {
-   width: 100%;
-   height: 100vh;
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
 }
 
- .other-products .swiper-slide .card {
-   width: 400px;
-   height: 400px;
-   overflow: hidden;
+.other-products hr {
+    border-top: 1px solid #000000;
+    width: 38%;
+}
 
+.other-products .swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.other-products .swiper-slide .card {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
 }
 
 .other-products .swiper-slide .card-img {
-   display: block;
-   width: 400px;
-   height: 400px;
+    display: block;
+    width: 400px;
+    height: 400px;
 }
+
 
 /* Blog Page */
 
 .blog .blog-text h1 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 500;
-  font-size: 3rem;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+    font-size: 3rem;
 }
 
 .blog .blog-text p {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 .blog .blog-text button {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  background-color: #F7A945;
-  border: none;
-  border-radius: 0;
-  width: 50%;
-  letter-spacing: 0.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: #F7A945;
+    border: none;
+    border-radius: 0;
+    width: 50%;
+    letter-spacing: 0.1rem;
 }
 
 .blog .blog-text button a {
-  color: #FFFFFF;
-  text-decoration: none;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
-.blog .blog-text button:hover{
-  background-color: #000000;
+.blog .blog-text button:hover {
+    background-color: #000000;
 }
+
 
 /** Bottom Banner **/
 
 .bottom-banner {
-  height: 70vh;
+    height: 70vh;
 }
 
 .bottom-banner .text-area {
-  background-color: #F6F6F4;
-  width: 80vh;
-  height: 40vh;
-  padding: 5rem 7rem;
-  text-align: center;
+    background-color: #F6F6F4;
+    width: 80vh;
+    height: 40vh;
+    padding: 5rem 7rem;
+    text-align: center;
 }
 
 .bottom-banner .text-area h1 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 500;
-  font-size: 2.5rem;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+    font-size: 2.5rem;
 }
 
 .bottom-banner .text-area p {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 .bottom-banner .text-area button {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  background-color: #F6F6F4;
-  border: 1px solid #000000;
-  border-radius: 0;
-  width: 40%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: #F6F6F4;
+    border: 1px solid #000000;
+    border-radius: 0;
+    width: 40%;
 }
 
 .bottom-banner .text-area button a {
-  color: #000000;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
+    color: #000000;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
 }
-
 
 .bottom-banner .text-area button:hover {
-  background-color: #000000;
-  color: #F6F6F4;
+    background-color: #000000;
+    color: #F6F6F4;
 }
-
 
 .bottom-banner .text-area button a:hover {
-  color: #F6F6F4;
+    color: #F6F6F4;
 }
 
+
 /* Blog Content Page */
+
 
 /** Blog Content Banner **/
 
 .content-banner {
-  height: 90vh;
-  position: relative;
+    height: 90vh;
+    position: relative;
 }
 
 .content-banner::before {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.301);
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.301);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .content-banner .text-area {
-  width: 65vh;
-  position: relative;
+    width: 65vh;
+    position: relative;
 }
 
 .content-banner .text-area h1 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 500;
-  font-size: 4rem;
-  color: #F6F6F4;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+    font-size: 4rem;
+    color: #F6F6F4;
 }
 
 .content-banner .text-area p {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 1.25;
-  color: #F6F6F4;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.25;
+    color: #F6F6F4;
 }
 
 .content-banner hr {
-  border-top: 2px solid #FFFFFF;
-  background-color: #FFFFFF;
-  width: 15rem;
-  position: relative;
-  bottom: 6rem;
+    border-top: 2px solid #FFFFFF;
+    background-color: #FFFFFF;
+    width: 15rem;
+    position: relative;
+    bottom: 6rem;
 }
+
 
 /** Blog Content Text **/
 
 .blog-content .blog-text {
-  width: 60vh;
-  position: relative;
-  left: 30%;
-  padding: 5rem;
+    width: 60vh;
+    position: relative;
+    left: 30%;
+    padding: 5rem;
 }
 
 .blog-content .mini-title {
-  font-family: 'Qwitcher Grypen', cursive !important;
-  font-size: 4rem;
+    font-family: 'Qwitcher Grypen', cursive !important;
+    font-size: 4rem;
 }
 
 .blog-content .blog-text h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 2.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 2.6rem;
 }
 
 .blog-content .blog-text p {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 
 /** Other Content Slider **/
 
 .other-content {
-  background-color: #F6F6F4;
-  height: 60vh;
+    background-color: #F6F6F4;
+    height: 60vh;
 }
 
 .other-content h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 3rem;
-  letter-spacing: 0.1rem;
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
 }
 
- .other-content hr {
+.other-content hr {
     border-top: 1px solid #000000;
     width: 38%;
 }
-

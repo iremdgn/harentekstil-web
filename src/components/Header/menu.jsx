@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav, NavDropdown } from 'react-bootstrap'
+import { Nav, NavDropdown, Navbar, Form, FormControl, Container, Offcanvas, Button } from 'react-bootstrap'
 import Image from 'next/image'
 
 function Menu() {
@@ -50,6 +50,7 @@ function Menu() {
                 <Nav.Link href="/contact" eventKey="link-4">İLETİŞİM</Nav.Link>
 
             </Nav>
+
         </>
     )
 }

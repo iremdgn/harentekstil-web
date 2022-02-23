@@ -8,7 +8,7 @@ function Header() {
         <>
             <Navbar bg="white">
                 <Container className="justify-content-center">
-                    <Navbar.Brand href="#home" className="fs-2">
+                    <Navbar.Brand href="/" className="fs-2">
                         <span>HAREN</span>
                         <span className="mx-3">
                             <Image src="/assets/images/logo.jpg" alt="logo" width="50" height="50" />
