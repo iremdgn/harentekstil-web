@@ -742,6 +742,27 @@ a {
     top: -10px;
 }
 
+@media (340px <=width <=844px) {
+
+    .product-slider {
+        height: 20vh;
+    }
+
+    .product-slider .swiper {
+        width: 70%;
+        height: 100%;
+    }
+
+    .product-slider .swiper .card {
+        height: 85%;
+    }
+    
+    .product-slider .card-title {
+        font-size: 0.85rem;
+    }
+    
+    
+}
 
 /* Banner */
 
@@ -771,6 +792,38 @@ a {
     font-weight: 300;
 }
 
+@media (340px <=width <=844px) {
+    .banner {
+        height: 100vh;
+    }
+    
+    .banner .banner-area {
+        height: 90%;
+        width: 85%;
+    }
+    
+    .banner .text-area {
+        text-align: center;
+        padding: 6rem 1rem;
+    }
+
+    
+    .banner .banner-text  {
+        height: 20vh;
+    }
+    
+    .banner .banner-text h1 {
+        font-size: 2rem;
+    }
+    
+    .banner .banner-text p {
+        font-size: 1rem;
+    }
+
+    .banner-image {
+        background-size: cover;
+    }
+}
 
 /* Jumbotron */
 

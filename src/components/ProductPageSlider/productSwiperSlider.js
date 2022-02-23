@@ -13,6 +13,16 @@ function ProductSwiperSlider() {
 
                 slidesPerView={6}
                 spaceBetween={25}
+                breakpoints={{
+                    940: {
+                        slidesPerView:6,
+                        spaceBetween:25
+                    },
+                    340: {
+                        slidesPerView:2.5,
+                        spaceBetween:10
+                    }
+                }}
                 autoplay={{
                     delay: 2000,
                     disableOnInteraction: false,
@@ -27,7 +37,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
+                            <Card.Title className="text-center pt-lg-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -35,7 +45,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
+                            <Card.Title className="text-center pt-lg-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -43,7 +53,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
+                            <Card.Title className="text-center pt-lg-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -51,7 +61,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
+                            <Card.Title className="text-center pt-lg-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -59,7 +69,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
+                            <Card.Title className="text-center pt-lg-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -67,7 +77,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
+                            <Card.Title className="text-center pt-lg-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -75,7 +85,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
+                            <Card.Title className="text-center pt-lg-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>
@@ -83,7 +93,7 @@ function ProductSwiperSlider() {
                     <Card>
                         <Card.Img variant="top" src="/assets/images/homepage.jpg" />
                         <Card.Body>
-                            <Card.Title className="text-center pt-2">Kategori</Card.Title>
+                            <Card.Title className="text-center pt-lg-2">Kategori</Card.Title>
                         </Card.Body>
                     </Card>       
                 </SwiperSlide>

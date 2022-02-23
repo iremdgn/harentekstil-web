@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap'
 function ProductCard(props) {
     return (
         <>
-            <div className="product-card position-relative">
+            <div className="product-card position-relative my-3 my-lg-0">
                 <Card>
                     <Card.Img src={props.src} alt={props.alt} />
                     <div className="product-card-overlay">
