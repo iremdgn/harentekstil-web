@@ -7,7 +7,7 @@ function HomeVisualCard() {
     return (
         <div className="home-visual">
             <Row>
-                <Col sm={7}>
+                <Col lg={7}>
                     <VisualCardLarge 
                         srcVisual="/assets/images/visualcard3.jpg" 
                         altVisual="Card image" 
@@ -15,7 +15,7 @@ function HomeVisualCard() {
                         textVisual="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."  
                     />
                 </Col>
-                <Col sm={3}>
+                <Col lg={3}>
                     <VisualCard 
                         srcVisual="/assets/images/visualcard.jpg" 
                         altVisual="Card image" 

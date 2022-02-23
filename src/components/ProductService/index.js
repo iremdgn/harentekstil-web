@@ -6,14 +6,14 @@ function ProductService(props) {
   return (
     <>
       <Row className={'product-service ' + props.serviceClass}>
-        <Col className="product-service-area">
+        <Col xs={12} lg={6} className="product-service-area">
           <ProductServiceText
             miniTitle={props.miniTitle}
             title={props.title}
             text={props.text}
           />
         </Col>
-        <Col  style={{ backgroundImage: `url(${props.imageUrl})` }}>
+        <Col xs={12} lg={6}  style={{ backgroundImage: `url(${props.imageUrl})` }}>
         </Col>
       </Row>
 

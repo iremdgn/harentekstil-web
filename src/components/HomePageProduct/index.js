@@ -6,8 +6,8 @@ function HomePageProduct() {
     return (
         <>
             <Container className="p-5">
-                <Row className="p-5">
-                    <Col>
+                <Row className="p-lg-5">
+                    <Col xs={12} lg={6} className="mb-3">
                         <ProductCard 
                         src="/assets/images/product.png" 
                         alt="Card image" 
@@ -15,7 +15,7 @@ function HomePageProduct() {
                         text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."                           
                         />
                     </Col>
-                    <Col>
+                    <Col xs={12} lg={6}>
                         <ProductCard 
                         src="/assets/images/product2.png" 
                         alt="Card image"
