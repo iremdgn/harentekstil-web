@@ -5,7 +5,7 @@ import VisualCardLarge from './visualCardLarge'
 
 function HomeVisualCard() {
     return (
-        <div className="home-visual d-none">
+        <div className="home-visual">
             <Row>
                 <Col lg={7}>
                     <VisualCardLarge 
