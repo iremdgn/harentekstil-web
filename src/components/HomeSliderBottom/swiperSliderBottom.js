@@ -15,6 +15,10 @@ function SwiperSliderBottom() {
                 slidesPerView={5}
                 spaceBetween={10}
                 breakpoints={{
+                    940: {
+                        slidesPerView:5,
+                        spaceBetween:10
+                    },
                     340: {
                         slidesPerView:2.5,
                         spaceBetween:10
