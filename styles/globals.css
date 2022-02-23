@@ -872,7 +872,7 @@ a {
 
 .jumbotron .jumbotron-text {
     margin-left: 0;
-    padding: 3rem !important;
+    padding: 2.5rem !important;
 }
 
 .jumbotron .text-area h1 {
@@ -918,6 +918,12 @@ a {
 .contact .form-control::placeholder {
     font-family: 'Poppins', sans-serif;
     font-size: 0.85rem;
+}
+
+@media (340px <=width <=844px) {
+    .contact h1 {
+        font-size: 2.5rem;
+    }
 }
 
 

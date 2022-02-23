@@ -4,9 +4,9 @@ import { Form, Button } from 'react-bootstrap'
 
 function ContactInformation() {
     return (
-        <div className="contact ps-5 ms-5">
+        <div className="contact ps-lg-5 ms-lg-5 pt-4 pt-lg-0">
             <div>
-                <h1 className="pb-4">İletişim Bilgilerimiz</h1>
+                <h1 className="pb-lg-4">İletişim Bilgilerimiz</h1>
 
                 <div className="d-flex">
                     <p className="pe-2"><span>Telefon 1: </span></p>
@@ -30,7 +30,7 @@ function ContactInformation() {
             </div>
 
             <div>
-                <h1 className="pb-2 pt-3">Adresimiz</h1>
+                <h1 className="pb-2 pt-lg-3">Adresimiz</h1>
 
                 <p><span>Eskihisar mahahallesi 8015 sokak 1A/Blok No: 3 Merkezefendi/Denizli</span></p>
             </div>
