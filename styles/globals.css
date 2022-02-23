@@ -857,12 +857,13 @@ a {
 }
 
 @media (340px <=width <=844px) {
-    .jumbotron {
-        height: 40vh;
-    }
+
+.jumbotron {
+    height: 40vh;
+}
 
 .jumbotron hr {
-        display: none;
+    display: none;
 }
     
 .jumbotron .jumbotron-image{
@@ -1034,6 +1035,17 @@ a {
     background-color: #000000;
 }
 
+@media (340px <=width <=844px) {
+    .blog .blog-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .blog .blog-text button {
+        width: 100%;
+    }
+
+}
+
 
 /** Bottom Banner **/
 
@@ -1084,6 +1096,28 @@ a {
     color: #F6F6F4;
 }
 
+@media (340px <=width <=844px) {
+  
+.bottom-banner {
+    height: 60vh;
+    background-size: cover;
+}
+
+.bottom-banner .text-area {
+    width: 85%;
+    height: 80%;
+    padding: 3rem;
+}
+
+.bottom-banner .text-area h1 {
+    font-size: 2rem;
+}
+
+.bottom-banner .text-area button {
+    width: 100%;
+}
+
+}
 
 /* Blog Content Page */
 
