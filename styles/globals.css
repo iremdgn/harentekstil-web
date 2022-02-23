@@ -761,7 +761,6 @@ a {
         font-size: 0.85rem;
     }
     
-    
 }
 
 /* Banner */
@@ -857,6 +856,29 @@ a {
     font-weight: 300;
 }
 
+@media (340px <=width <=844px) {
+    .jumbotron {
+        height: 40vh;
+    }
+
+.jumbotron hr {
+        display: none;
+}
+    
+.jumbotron .jumbotron-image{
+    display: none;
+}
+
+.jumbotron .jumbotron-text {
+    margin-left: 0;
+    padding: 3rem !important;
+}
+
+.jumbotron .text-area h1 {
+    font-size: 3rem;
+}
+
+}
 
 /* Contact */
 
