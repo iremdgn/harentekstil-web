@@ -5,7 +5,7 @@ import SwiperSlider from './swiperSlider';
 
 function HomePageSlider() {
   return (
-    <>
+    <div className="home-slider">
       <Row className="homepage-slider mt-3">
         <Col sm={12} lg={6} className="d-flex position-relative text-area">
           <div>
@@ -25,7 +25,7 @@ function HomePageSlider() {
 
         </Col>
       </Row>
-    </>
+    </div>
   );
 }
 

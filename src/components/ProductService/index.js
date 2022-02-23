@@ -4,7 +4,7 @@ import ProductServiceText from './productServiceText'
 
 function ProductService(props) {
   return (
-    <>
+    <div className="service">
       <Row className={'product-service ' + props.serviceClass}>
         <Col xs={12} lg={6} className="product-service-area">
           <ProductServiceText
@@ -13,11 +13,11 @@ function ProductService(props) {
             text={props.text}
           />
         </Col>
-        <Col xs={12} lg={6}  style={{ backgroundImage: `url(${props.imageUrl})` }}>
+        <Col className="product-service-image" xs={12} lg={6}  style={{ backgroundImage: `url(${props.imageUrl})` }}>
         </Col>
       </Row>
 
-    </>
+    </div>
   );
 }
 
