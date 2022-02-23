@@ -636,7 +636,6 @@ a {
     }
 }
 
-
 /* Home Page Bottom Slider */
 
 .slider-bottom {
@@ -667,6 +666,26 @@ a {
     object-fit: cover;
 }
 
+@media (340px <=width <=844px) {
+
+    .slider-bottom {
+        height: 55vh;
+    }
+    
+    .slider-bottom h1 {
+        font-size: 2.5rem;
+    }
+    
+    .slider-bottom hr {
+        width: 25%;
+    }
+    
+    .slider-bottom .swiper {
+        width: 100%;
+        height: 25vh;
+    }
+    
+}
 
 /* Footer */
 

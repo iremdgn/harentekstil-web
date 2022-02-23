@@ -1,12 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react"
 import Image from 'next/image'
+import { Autoplay } from "swiper";
 
 import "swiper/css"
 import "swiper/css/pagination"
 
-
-import { Pagination } from "swiper"
 
 function SwiperSliderBottom() {
     return (
@@ -15,10 +14,18 @@ function SwiperSliderBottom() {
 
                 slidesPerView={5}
                 spaceBetween={10}
-                pagination={{
-                    dynamicBullets: true,
+                breakpoints={{
+                    340: {
+                        slidesPerView:2.5,
+                        spaceBetween:10
+                    }
                 }}
-                modules={[Pagination]}
+                autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                }}
+
+                modules={[Autoplay]}
                 className="mySwiper"
             >
 
