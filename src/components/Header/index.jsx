@@ -6,7 +6,7 @@ import Image from 'next/image'
 function Header() {
     return (
         <>
-            <Navbar bg="white">
+            <Navbar bg="white" className="top-logo">
                 <Container className="justify-content-center">
                     <Navbar.Brand href="/" className="fs-2">
                         <span>HAREN</span>
