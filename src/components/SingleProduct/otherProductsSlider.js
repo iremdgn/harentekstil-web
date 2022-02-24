@@ -2,11 +2,9 @@ import React from "react";
 import { Container } from 'react-bootstrap'
 import ProductCard from '../HomePageProduct/productCard'
 import { Swiper, SwiperSlide } from "swiper/react"
+import { Autoplay } from "swiper";
 import "swiper/css"
 import "swiper/css/pagination"
-
-
-import { Pagination } from "swiper"
 
 function OtherProductsSlider() {
     return (
@@ -16,10 +14,24 @@ function OtherProductsSlider() {
 
                     slidesPerView={3}
                     spaceBetween={10}
-                    pagination={{
-                        dynamicBullets: true,
-                    }}
-                    modules={[Pagination]}
+                    breakpoints={{
+                    940: {
+                        slidesPerView:3,
+                        spaceBetween:10
+                    },
+                    340: {
+                        slidesPerView:1,
+                        spaceBetween:10
+                    }
+                }}
+
+                autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                }}
+
+                modules={[Autoplay]}
+
                     className="mySwiper"
                 >
 

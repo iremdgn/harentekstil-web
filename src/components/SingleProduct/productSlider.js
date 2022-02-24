@@ -44,6 +44,14 @@ function ProductSlider() {
                 spaceBetween={30}
                 onSwiper={setThumbsSwiper}
                 slidesPerView={5}
+                breakpoints={{
+                    940: {
+                        spaceBetween:30
+                    },
+                    340: {
+                        spaceBetween:10
+                    }
+                }}
                 freeMode={true}
                 watchSlidesProgress={true}
                 modules={[FreeMode, Navigation, Thumbs]}

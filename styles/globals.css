@@ -856,6 +856,10 @@ a {
     font-weight: 300;
 }
 
+.jumbotron-image {
+    background-size: cover;
+}
+
 @media (340px <=width <=844px) {
 
 .jumbotron {
@@ -972,7 +976,6 @@ a {
     color: #797575;
 }
 
-
 /** Other Products Slider **/
 
 .other-products {
@@ -993,7 +996,7 @@ a {
 
 .other-products .swiper {
     width: 100%;
-    height: 100vh;
+    height: 50vh;
 }
 
 .other-products .swiper-slide .card {
@@ -1006,6 +1009,45 @@ a {
     display: block;
     width: 400px;
     height: 400px;
+}
+
+
+@media (340px <=width <=844px) {
+    .single-product .gallery-top {
+        width: 100%;
+    }
+    
+    .single-product .gallery-thumbs {
+        height: 60px;
+        width: 100%;
+    }
+    
+    .other-products {
+        height: 75vh;
+    }
+    
+    .other-products h1 {
+        font-size: 2.5rem;
+    }
+
+    .other-products hr {
+        width: 25%;
+    }
+
+    .other-products .swiper {
+        width: 100%;
+        height: 50vh;
+    }
+   
+    .other-products .swiper-slide .card {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .other-products .swiper-slide .card-img {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 
@@ -1173,6 +1215,20 @@ a {
     bottom: 6rem;
 }
 
+@media (340px <=width <=844px) {
+    .content-banner {
+        height: 70vh;
+        padding: 0 2rem;
+    }
+    
+    .content-banner .text-area h1 {
+        font-size: 3.5rem;
+    }
+    
+    .content-banner hr {
+      display:none;
+    }
+}
 
 /** Blog Content Text **/
 
@@ -1199,6 +1255,28 @@ a {
     font-weight: 300;
 }
 
+@media (340px <=width <=844px) {
+    .blog-content .blog-text {
+        width: 100%;
+        left: 0;
+        padding: 0 2rem;
+    }
+    
+    .blog-content .mini-title {
+        font-size: 3.5rem;
+    }
+    
+    .blog-content .blog-text h1 {
+        font-size: 2.3rem;
+    }
+
+    .blog-content .blog-image {
+        width: 100%;
+        height: 40vh;
+        background-size: cover;
+    }
+}
+
 
 /** Other Content Slider **/
 
@@ -1216,4 +1294,18 @@ a {
 .other-content hr {
     border-top: 1px solid #000000;
     width: 38%;
+}
+
+@media (340px <=width <=844px) {
+    .other-content {
+        height: 50vh;
+    }
+    
+    .other-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .other-content hr {
+        width: 25%;
+    }
 }

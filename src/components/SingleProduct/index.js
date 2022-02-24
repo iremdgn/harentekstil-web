@@ -6,13 +6,13 @@ import { Container, Row, Col } from 'react-bootstrap'
 function SingleProduct(props) {
     return (
         <>
-            <Container className="p-5 single-product">
-                <Row className="p-4">
-                    <Col>
+            <Container className="p-lg-5 p-3 single-product">
+                <Row className="p-lg-4">
+                    <Col xs={12} lg={6}>
                         <ProductSlider />
                     </Col>
-                    <Col>
-                        <div className="ps-5 ms-4 product-text">
+                    <Col xs={12} lg={6}>
+                        <div className="ps-lg-5 ms-lg-4 product-text mt-4 mt-lg-0">
                             <h1>{props.Title}</h1>
                             <p><span>{props.Code}</span></p>
                             <p className="pt-2">{props.Text}</p>

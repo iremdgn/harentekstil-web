@@ -6,15 +6,15 @@ function BlogContent(props) {
         <div className="blog-content">
 
             <Row className={" " + props.contentClass}>
-                <Col>
-                    <div className="ps-1 ms-4 blog-text">
+                <Col xs={12} lg={6}>
+                    <div className="ps-lg-1 ms-lg-4 blog-text">
                         <p className="mini-title">{props.miniTitle}</p>
                         <h1>{props.title}</h1>
                         <p className="pt-3">{props.text}</p>
                     </div>
 
                 </Col>
-                <Col style={{ backgroundImage: `url(${props.imageUrl})` }}>
+                <Col  className="blog-image" xs={12} lg={6} style={{ backgroundImage: `url(${props.imageUrl})` }}>
                     
                 </Col>
             </Row>

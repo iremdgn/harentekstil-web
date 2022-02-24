@@ -8,7 +8,7 @@ function BlogPage() {
         <>
             <Jumbotron
                 imageUrl="/assets/images/homepage2.jpg"
-                title="BlogPage"
+                title="Blog"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit tortor, facilisis sed sapien sed, ultrices pellentesque erat. "
             />
 
