@@ -15,7 +15,9 @@ function ProductsPage() {
                 bgColor="#F7A945"
             />
             
-            <Products />
+            <Products 
+                Category="Tekne / Yat Kumaşları"
+            />
             
             <HomeSliderBottom />
         </>

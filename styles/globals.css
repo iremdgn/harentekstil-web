@@ -278,11 +278,16 @@ a {
     position: absolute;
     bottom: 0 !important;
 }
+.category-title{
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+    font-size: 3rem;
+}
 
 .product-card .card-title {
     font-family: 'DM Serif Display', serif;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .product-card .card-text {
@@ -323,7 +328,7 @@ a {
         width: 100%;
     }
     .product-card .card-title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #FFFFFF;
         text-align: left !important;
     }
@@ -335,6 +340,10 @@ a {
     }
     .product-card:hover .product-card-overlay {
         width: 100%;
+    }
+
+    .category-title{
+        font-size: 1.6rem;
     }
 }
 
@@ -766,25 +775,25 @@ a {
 
 .product-slider {
     background-color: #F6F6F4;
-    height: 25vh;
+    height: 32vh;
 }
 
 .product-slider .swiper {
-    width: 65%;
-    height: 24vh;
+    width: 45%;
+    height: 35vh;
 }
 
 .product-slider .card {
     border-radius: 0 !important;
     border: none;
     background-color: #F6F6F4;
-    height: 18vh;
+    height: 23vh;
 }
 
 .product-slider .card-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
 }
 
 .product-slider .card:hover {
@@ -799,7 +808,7 @@ a {
 @media (340px <=width <=844px) {
 
     .product-slider {
-        height: 20vh;
+        height: 25vh;
     }
 
     .product-slider .swiper {
@@ -808,11 +817,11 @@ a {
     }
 
     .product-slider .swiper .card {
-        height: 85%;
+        height: 90%;
     }
     
     .product-slider .card-title {
-        font-size: 0.85rem;
+        font-size: 0.7rem;
     }
     
 }

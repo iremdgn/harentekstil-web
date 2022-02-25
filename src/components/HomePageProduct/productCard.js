@@ -9,7 +9,7 @@ function ProductCard(props) {
                     <Card.Img src={props.src} alt={props.alt} />
                     <div className="product-card-overlay">
                         <Card.ImgOverlay>
-                            <Card.Title className="ps-3">{props.title}</Card.Title>
+                            <Card.Title className="ps-3 pt-2">{props.title}</Card.Title>
                             <Card.Text className="ps-3">
                                 {props.text}
                             </Card.Text>
