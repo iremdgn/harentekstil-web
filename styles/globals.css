@@ -125,7 +125,7 @@ a {
 .offcanvas-start {
     top: 90px !important;
     height: 100% !important;
-    background-color: rgba(0, 0, 0, 0.459) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .offcanvas-backdrop {
