@@ -52,11 +52,9 @@ function Menu() {
 
             {/* Mobile Navbar */}
 
-            <Navbar className="mobile-navbar d-none justify-content-center" expand={false}>
-                <Container>
-                    <Navbar.Toggle>
-                        <span className="">MENÜ</span>
-                    </Navbar.Toggle>
+            <Navbar className="mobile-navbar d-none " expand={false}>
+                <div className="d-flex ">
+                    <Navbar.Toggle className="mx-2 pt-3" aria-controls="offcanvasNavbar" />
                     <Navbar.Offcanvas
                         id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel"
@@ -108,7 +106,14 @@ function Menu() {
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
-                </Container>
+                    <Navbar.Brand href="#">
+                        <span>HAREN</span>
+                        <span className="mx-2">
+                            <Image src="/assets/images/logo.jpg" alt="logo" width="40" height="40" />
+                        </span>
+                        <span className="ps-1">TEKSTİL</span>
+                    </Navbar.Brand>
+                </div>
             </Navbar>
         </>
     )

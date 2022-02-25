@@ -23,6 +23,9 @@ a {
 
 /** Nabvar **/
 
+.navbar-brand {
+    margin-right: 0 !important;
+}
 .navbar a {
     font-family: 'Cormorant SC', serif;
     letter-spacing: 8px;
@@ -39,12 +42,10 @@ a {
 
 .nav a:hover {
     color: #F7A945;
-    font-weight: 500;
 }
 
 .nav .nav-link:focus {
     color: #F7A945 !important;
-    font-weight: 500;
 }
 
 .dropdown-item:focus,
@@ -122,29 +123,24 @@ a {
 }
 
 .offcanvas-start {
-    top: 135px !important;
-    height: 30% !important;
+    top: 90px !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.459) !important;
 }
 
 .offcanvas-backdrop {
-    top: 135px !important;
+    top: 90px !important;
 }
 
 .offcanvas-body a {
-    color: #000000 !important;
+    color: #ffffff !important;
     letter-spacing: 2px !important;
     font-weight: 500;
 }
 
 .navbar-toggler {
     border: none !important;
-    font-family: 'Poppins', sans-serif;
-    color: #000000 !important;
-    font-weight: 500;
-    font-size: 1.1rem !important;
-    padding: 0 !important;
 }
-
 
 @media (340px <=width <=844px) {
     .desktop-navbar {
@@ -155,6 +151,21 @@ a {
         display: block !important;
     }
 
+    .navbar.top-logo {
+        display: none !important;
+    }
+
+    .dropdown-menu {
+        margin-top:0 !important;
+        padding: 0 !important;
+        background-color: transparent !important;
+    }
+
+    .dropdown-menu .dropdown-item .img-text {
+        color: #ffffff;
+    }
+    
+    
 }
 
 /* Home Page Slider */
