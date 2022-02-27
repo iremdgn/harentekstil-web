@@ -46,10 +46,12 @@ export const put = (request, data, token, type) => {
     });
 };
 
-export const get = (request, token) => {
+export const get = (request, params, token) => {
+    const customConfig = {...config, params: params}
+    
     return new Promise((resolve, reject) => {
         axios
-            .get(request, config)
+            .get(request, customConfig)
             .then((response) => {
                 resolve(response);
             })
