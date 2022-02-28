@@ -20,6 +20,21 @@ export const post = (request, data, token, type) => {
     });
 };
 
+export const get = (request, params, token) => {
+    const customConfig = {...config, params: params}
+    
+    return new Promise((resolve, reject) => {
+        axios
+            .get(request, customConfig)
+            .then((response) => {
+                resolve(response);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+    });
+};
+
 export const deleteFunction = (request, data, token) => {
     return new Promise((resolve, reject) => {
         axios
@@ -46,17 +61,3 @@ export const put = (request, data, token, type) => {
     });
 };
 
-export const get = (request, params, token) => {
-    const customConfig = {...config, params: params}
-    
-    return new Promise((resolve, reject) => {
-        axios
-            .get(request, customConfig)
-            .then((response) => {
-                resolve(response);
-            })
-            .catch((error) => {
-                reject(error);
-            });
-    });
-};

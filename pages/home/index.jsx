@@ -8,15 +8,27 @@ import HomeSliderBottom from '../../src/components/HomeSliderBottom'
 import HomePageProductBottom from '/src/components/HomePageProductBottom'
 
 import { get } from '/src/services/request'
-import { servicesConfig } from '/config'
+import { imagesConfig } from '/config'
 
 function HomePage() {
 
     const [homePage, setHomePage] = useState(null);
 
     const getHomePageData = async () => {
-        const response = await get('http://localhost:1337/api/home-page', { populate: ['productService', 'productService.image', 'productService.image.media'] });
-
+        const response = await get('http://localhost:1337/api/home-page',
+            {
+                populate: [
+                    'productService',
+                    'productService.image',
+                    'productService.image.media',
+                    'homePageHeader',
+                    'homePageHeader.homePageImage',
+                    'homePageHeader.homePageImage.media',
+                    'homePageSlider',
+                    'homePageSlider.slide.media',
+                    'homePageSlider.slide.image.media'
+                ]
+            });
         console.log(response);
 
         if (response.status === 200) {
@@ -33,12 +45,19 @@ function HomePage() {
         homePage != null &&
 
         <>
-            <HomePageSlider />
+            <HomePageSlider 
+                imageUrl={imagesConfig.api + homePage.homePageHeader.homePageImage.data.attributes.url}
+                title={homePage.homePageHeader.homePageTitle}
+                firstText={homePage.homePageHeader.homePageFirstText}
+                text={homePage.homePageHeader.homePageText}
+                swiperImage={homePage.homePageSlider.slide}
+            />
+
             <HomePageProduct />
             {homePage.productService.map((item, key) => {
                 return (
                     <ProductService key={key}
-                        imageUrl={servicesConfig.api + item.image.data.attributes.url}
+                        imageUrl={imagesConfig.api + item.image.data.attributes.url}
                         miniTitle={item.miniTitle}
                         title={item.title}
                         text={item.text}

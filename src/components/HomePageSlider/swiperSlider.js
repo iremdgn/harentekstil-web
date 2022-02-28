@@ -5,7 +5,14 @@ import "swiper/css/pagination";
 import { Autoplay } from "swiper";
 import Image from 'next/image'
 
-function SwiperSlider() {
+import { imagesConfig } from '/config'
+
+function SwiperSlider(props) {
+
+    const { swiperImage } = props;
+
+    console.log(swiperImage);
+
     return (
         <>
             <Swiper
@@ -19,21 +26,20 @@ function SwiperSlider() {
                 modules={[Autoplay]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <Image src="/assets/images/slider.jpg" alt="slider1" layout='fill' />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src="/assets/images/slider2.jpg" alt="slider1" layout='fill' />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src="/assets/images/slider3.jpg" alt="slider1" layout='fill' />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src="/assets/images/slider4.jpg" alt="slider1" layout='fill' />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src="/assets/images/slider5.jpg" alt="slider1" layout='fill' />
-                </SwiperSlide>
+                {swiperImage.map((item, key) => {
+                    return (
+                        <SwiperSlide key={key}>
+                            <Image
+                                loader={() => { return imagesConfig.api + item.image.data.attributes.url }}
+                                src={imagesConfig.api + item.image.data.attributes.url} alt={props.alt}
+                                layout='fill'
+
+                            />
+                        </SwiperSlide>
+                    )
+                })}
+
+
             </Swiper>
         </>
     );
