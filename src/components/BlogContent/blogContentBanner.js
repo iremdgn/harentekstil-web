@@ -1,10 +1,9 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
 
 
 function BlogContentBanner(props) {
     return (
-        <div className="content-banner d-flex align-items-center" style={{ backgroundImage: "url('/assets/images/homepage2.jpg')" }}>
+        <div className="content-banner d-flex align-items-center" style={{ backgroundImage: `url(${props.imageUrl})` }}>
             <hr className="me-3"></hr>
             <div className="text-area">
                 <h1>{props.title}</h1>

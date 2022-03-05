@@ -3,31 +3,38 @@ import { Row, Col } from 'react-bootstrap'
 import VisualCard from './visualCard'
 import VisualCardLarge from './visualCardLarge'
 
-function HomeVisualCard() {
+import { imagesConfig } from '/config'
+
+function HomeVisualCard(props) {
+
+    const { visualCardLarge, visualCard } = props;
+
     return (
         <div className="home-visual">
             <Row>
                 <Col lg={7}>
-                    <VisualCardLarge 
-                        srcVisual="/assets/images/visualcard3.jpg" 
-                        altVisual="Card image" 
-                        titleVisual="Kumaşlar" 
-                        textVisual="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."  
+                    <VisualCardLarge
+                        srcVisual={imagesConfig.api + visualCardLarge.image.data.attributes.url}
+                        altVisual="Card image"
+                        titleVisual={visualCardLarge.title}
+                        textVisual={visualCardLarge.text}
+                        buttonText={visualCardLarge.buttonText}
+                        buttonLink={visualCardLarge.buttonLink}
                     />
                 </Col>
                 <Col lg={3}>
-                    <VisualCard 
-                        srcVisual="/assets/images/visualcard.jpg" 
-                        altVisual="Card image" 
-                        titleVisual="Kumaşlar" 
-                        textVisual="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."  
-                    />
-                    <VisualCard 
-                        srcVisual="/assets/images/slider4.jpg" 
-                        altVisual="Card image" 
-                        titleVisual="Kumaşlar" 
-                        textVisual="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."  
-                    />
+                    {visualCard.map((item, key) => {
+                        return (
+                            <VisualCard key={key}
+                                srcVisual={imagesConfig.api + item.image.data.attributes.url}
+                                altVisual="Card image"
+                                titleVisual={item.title}
+                                textVisual={item.text}
+                                link={item.link}
+                            />
+                        )
+                    })}
+
                 </Col>
             </Row>
 

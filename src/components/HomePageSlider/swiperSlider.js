@@ -10,9 +10,7 @@ import { imagesConfig } from '/config'
 function SwiperSlider(props) {
 
     const { swiperImage } = props;
-
-    console.log(swiperImage);
-
+    
     return (
         <>
             <Swiper

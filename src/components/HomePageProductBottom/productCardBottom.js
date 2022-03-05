@@ -6,6 +6,7 @@ function ProductCardBottom(props) {
         <>
             <div className="product-card-bottom">
                 <Card>
+                    <a className="link-full" href={props.url}></a>
                     <Card.Img src={props.src} alt={props.alt} />
                     <div className="product-card-bottom-overlay">
                         <Card.ImgOverlay>
@@ -15,7 +16,6 @@ function ProductCardBottom(props) {
                             </Card.Text>
                         </Card.ImgOverlay>
                     </div>
-
                 </Card>
             </div>
         </>

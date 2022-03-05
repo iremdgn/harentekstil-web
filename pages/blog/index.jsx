@@ -1,15 +1,44 @@
-import React from 'react'
+import React, { useState, useEffect }from 'react'
 import Jumbotron from '/src/components/Jumbotron'
 import Blog from '/src/components/Blog'
 import BottomBanner from '/src/components/Blog/bottomBanner'
 
+import { get } from '/src/services/request'
+import { imagesConfig } from '/config'
+
 function BlogPage() {
+
+    const [blogPage, setBlogPage] = useState(null);
+
+    const getBlogData = async () => {
+        const response = await get('http://localhost:1337/api/blog-page',
+            {
+                populate: [
+                    'jumbotron',
+                    'jumbotron.image',
+                    'jumbotron.image.media',
+                ]
+            });
+        console.log(response);
+
+        if (response.status === 200) {
+            setBlogPage(response.data.data.attributes);
+        }
+    }
+
+    useEffect(() => {
+        getBlogData();
+    }, []);
+
     return (
+
+       blogPage != null &&
+
         <>
             <Jumbotron
-                imageUrl="/assets/images/homepage2.jpg"
-                title="Blog"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit tortor, facilisis sed sapien sed, ultrices pellentesque erat. "
+                imageUrl={imagesConfig.api + blogPage.jumbotron.image.data.attributes.url}
+                title={blogPage.jumbotron.title}
+                text={blogPage.jumbotron.text}
             />
 
             <Blog

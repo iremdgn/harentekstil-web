@@ -2,27 +2,31 @@ import React from 'react'
 import ProductCardBottom from './productCardBottom'
 import { Container, Row, Col } from 'react-bootstrap'
 
-function HomePageProductBottom() {
+import { imagesConfig } from '/config'
+
+function HomePageProductBottom(props) {
+
+    const { productList } = props;
+
+    console.log("bottompro", productList);
+
     return (
         <>
             <Container className="p-lg-5 home-bottom-product">
                 <Row className="p-lg-5">
-                    <Col xs={12} lg={6} className="mb-3">
-                        <ProductCardBottom 
-                        src="/assets/images/product.png" 
-                        alt="Card image" 
-                        title="Kumaşlar" 
-                        text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur."                           
-                        />
-                    </Col>
-                    <Col xs={12} lg={6}>
-                        <ProductCardBottom 
-                        src="/assets/images/product2.png" 
-                        alt="Card image"
-                        title="Kumaşlar" 
-                        text="İç veya Dış Mekan kumaşları, performans ve lüksün mükemmel uyumudur." 
-                        />
-                    </Col>
+                    {productList.map((item, key) => {
+                        return (
+                            <Col key={key} xs={12} lg={6} className="mb-3">
+                                <ProductCardBottom
+                                    src={imagesConfig.api + item.image.image.data.attributes.url}
+                                    alt="Card image"
+                                    title={item.title}
+                                    text={item.text}
+                                    url={item.image.url}
+                                />
+                            </Col>
+                        )
+                    })}
                 </Row>
             </Container>
 

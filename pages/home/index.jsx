@@ -26,10 +26,26 @@ function HomePage() {
                     'homePageHeader.homePageImage.media',
                     'homePageSlider',
                     'homePageSlider.slide.media',
-                    'homePageSlider.slide.image.media'
+                    'homePageSlider.slide.image.media',
+                    'visualCard',
+                    'visualCard.image',
+                    'visualCard.image.media',
+                    'visualCardLarge',
+                    'visualCardLarge.image',
+                    'visualCardLarge.image.media',
+                    'homeContact',
+                    'homeBottomSlider',
+                    'homeBottomSlider.slide.media',
+                    'homeBottomSlider.slide.image.media',
+                    'topProductList',
+                    'topProductList.image.media',
+                    'topProductList.image.image.media',
+                    'bottomProductList',
+                    'bottomProductList.image.media',
+                    'bottomProductList.image.image.media'
                 ]
             });
-        console.log(response);
+        console.log("homePageResponse", response);
 
         if (response.status === 200) {
             setHomePage(response.data.data.attributes);
@@ -45,7 +61,7 @@ function HomePage() {
         homePage != null &&
 
         <>
-            <HomePageSlider 
+            <HomePageSlider
                 imageUrl={imagesConfig.api + homePage.homePageHeader.homePageImage.data.attributes.url}
                 title={homePage.homePageHeader.homePageTitle}
                 firstText={homePage.homePageHeader.homePageFirstText}
@@ -53,7 +69,9 @@ function HomePage() {
                 swiperImage={homePage.homePageSlider.slide}
             />
 
-            <HomePageProduct />
+            <HomePageProduct
+                productList={homePage.topProductList}
+            />
             {homePage.productService.map((item, key) => {
                 return (
                     <ProductService key={key}
@@ -65,13 +83,25 @@ function HomePage() {
                 )
             })}
 
-            <HomePageContact />
+            <HomePageContact
+                title={homePage.homeContact.title}
+                text={homePage.homeContact.text}
+                link={homePage.homeContact.link}
 
-            <HomeVisualCard />
+            />
 
-            <HomePageProductBottom />
+            <HomeVisualCard
+                visualCard={homePage.visualCard}
+                visualCardLarge={homePage.visualCardLarge}
+            />
 
-            <HomeSliderBottom />
+            <HomePageProductBottom
+                productList={homePage.bottomProductList}
+            />
+
+            <HomeSliderBottom
+                bottomSlider={homePage.homeBottomSlider.slide}
+            />
         </>
     );
 }

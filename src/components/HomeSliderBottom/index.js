@@ -1,7 +1,8 @@
 import React from 'react'
 import SwiperSliderBottom from './swiperSliderBottom'
 
-function HomeSliderBottom() {
+function HomeSliderBottom(props) {
+
     return (
         <div className="slider-bottom pt-lg-5">
             <div className="slider-bottom-text d-flex">
@@ -9,7 +10,9 @@ function HomeSliderBottom() {
                 <h1 className="mt-3 ps-4 pt-1">Kuallanım Alanları</h1>
             </div>
             <div className="slider-area mt-5 pt-lg-5">
-                <SwiperSliderBottom />
+                <SwiperSliderBottom 
+                    bottomSlider={props.bottomSlider}
+                />
             </div>
         </div>
     );

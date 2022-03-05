@@ -4,7 +4,7 @@ import Jumbotron from '/src/components/Jumbotron'
 import ProductService from '/src/components/ProductService'
 
 import { get } from '/src/services/request'
-import { servicesConfig } from '/config'
+import { imagesConfig } from '/config'
 
 
 function AboutPage() {
@@ -12,7 +12,20 @@ function AboutPage() {
     const [aboutPage, setAboutPage] = useState(null);
 
     const getAboutPageData = async () => {
-        const response = await get('http://localhost:1337/api/about-page', { populate: ['productService', 'productService.image', 'productService.image.media'] });
+        const response = await get('http://localhost:1337/api/about-page',
+            {
+                populate: [
+                    'productService',
+                    'productService.image',
+                    'productService.image.media',
+                    'jumbotron',
+                    'jumbotron.image',
+                    'jumbotron.image.media',
+                    'banner',
+                    'banner.image',
+                    'banner.image.media'
+                ]
+            });
         console.log(response);
         if (response.status === 200) {
             setAboutPage(response.data.data.attributes);
@@ -28,20 +41,20 @@ function AboutPage() {
         aboutPage != null &&
         <>
             <Jumbotron
-                imageUrl="/assets/images/homepage2.jpg"
-                title="Biz Kimiz?"
-                text="Üstün ürünler sunma tutkumuz, bu ürünlerin performansıyla örtüşmektedir. Solmaya, yıpranmaya ve küflenmeye karşı dayanıklı, bakımı kolay ve teknik olarak üstün kumaşlarla olağanüstü mekanlar tasarlamak bizim işimiz."
+                imageUrl={imagesConfig.api + aboutPage.jumbotron.image.data.attributes.url}
+                title={aboutPage.jumbotron.title}
+                text={aboutPage.jumbotron.text}
             />
             <Banner
-                imageUrl="/assets/images/homepage2.jpg"
-                title="Üstün Performanslı Ürünler"
-                text="Üstün ürünler sunma tutkumuz, bu ürünlerin performansıyla örtüşmektedir. Solmaya, yıpranmaya ve küflenmeye karşı dayanıklı, bakımı kolay ve teknik olarak üstün kumaşlarla olağanüstü mekanlar tasarlamak bizim işimiz."
-                bannerClass="d-flex flex-row-reverse"
+                imageUrl={imagesConfig.api + aboutPage.banner.image.data.attributes.url}
+                title={aboutPage.banner.title}
+                text={aboutPage.banner.text}
+                bannerClass={aboutPage.banner.position == "left" ? "" : "d-flex flex-row-reverse"}
             />
             {aboutPage.productService.map((item, key) => {
                 return (
                     <ProductService key={key}
-                        imageUrl={servicesConfig.api + item.image.data.attributes.url}
+                        imageUrl={imagesConfig.api + item.image.data.attributes.url}
                         miniTitle={item.miniTitle}
                         title={item.title}
                         text={item.text}

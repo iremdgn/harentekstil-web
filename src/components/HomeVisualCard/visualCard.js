@@ -2,10 +2,12 @@ import React from 'react';
 import { Card } from 'react-bootstrap'
 
 function VisualCard(props) {
+
     return (
         <>
             <div className="visual-card position-relative">
                 <Card>
+                    <a href={props.link} className="link-full"></a>
                     <Card.Img src={props.srcVisual} alt={props.altVisual} />
                     <div className="visual-card-overlay">
                         <Card.ImgOverlay>
