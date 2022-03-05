@@ -34,16 +34,7 @@ function Menu() {
                     </NavDropdown.Item>
                 </NavDropdown>
 
-                <NavDropdown title="BLOG" id="basic-nav-dropdown">
-                    <NavDropdown.Item className="dropdown title" href="/blog">YAZILARIMIZ <span></span></NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown subtitle " href="/blog">Yazı 1</NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown subtitle " href="/blog">Yazı 2</NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown subtitle " href="/blog">Yazı 3</NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown pt-4" href="">
-                        <Image className="dropdown-image" src="/assets/images/slider3.jpg" alt="slider1" width="180" height="120" />
-                        <p className="img-text pt-2">Devamını Okuyun</p>
-                    </NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link href="/blog" eventKey="link-4">BLOG</Nav.Link>
 
                 <Nav.Link href="/contact" eventKey="link-4">İLETİŞİM</Nav.Link>
 

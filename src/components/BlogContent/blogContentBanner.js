@@ -7,7 +7,6 @@ function BlogContentBanner(props) {
             <hr className="me-3"></hr>
             <div className="text-area">
                 <h1>{props.title}</h1>
-                <p className="py-2">{props.text}</p>
             </div>
         </div>
     );

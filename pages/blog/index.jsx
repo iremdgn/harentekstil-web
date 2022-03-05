@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react'
+import React, { useState, useEffect } from 'react'
 import Jumbotron from '/src/components/Jumbotron'
 import Blog from '/src/components/Blog'
 import BottomBanner from '/src/components/Blog/bottomBanner'
@@ -10,7 +10,9 @@ function BlogPage() {
 
     const [blogPage, setBlogPage] = useState(null);
 
-    const getBlogData = async () => {
+    const [blogList, setBlogList] = useState(null);
+
+    const getBlogJumbotron = async () => {
         const response = await get('http://localhost:1337/api/blog-page',
             {
                 populate: [
@@ -19,46 +21,56 @@ function BlogPage() {
                     'jumbotron.image.media',
                 ]
             });
-        console.log(response);
+        console.log("blogJumbotron", response);
 
         if (response.status === 200) {
             setBlogPage(response.data.data.attributes);
         }
     }
 
+    const getBlogList = async () => {
+        const response = await get('http://localhost:1337/api/blogs',
+            {
+                populate: [
+                    'featuredImage',
+                    'featuredImage.media'
+                ]
+            });
+        console.log("blogList", response);
+
+        if (response.status === 200) {
+            setBlogList(response.data.data);
+        }
+    }
+
     useEffect(() => {
-        getBlogData();
+        getBlogJumbotron();
+        getBlogList();
     }, []);
 
     return (
 
-       blogPage != null &&
-
         <>
-            <Jumbotron
-                imageUrl={imagesConfig.api + blogPage.jumbotron.image.data.attributes.url}
-                title={blogPage.jumbotron.title}
-                text={blogPage.jumbotron.text}
-            />
+            {blogPage != null &&
+                <Jumbotron
+                    imageUrl={imagesConfig.api + blogPage.jumbotron.image.data.attributes.url}
+                    title={blogPage.jumbotron.title}
+                    text={blogPage.jumbotron.text}
+                />
+            }
 
-            <Blog
-                imageUrl="/assets/images/slider3.jpg"
-                title="Lorem ipsum dolor sit amet consectetur"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit tortor, facilisis sed sapien sed, ultrices pellentesque erat.Donec a efficitur leo. Donec tempus nibh sed nulla sagittis, nec ornare augue placerat."
-            />
+            {blogList != null && blogList.length > 0 && blogList.map((item, key) => {
+                return (
+                    <Blog key={key}
+                        imageUrl={imagesConfig.api + item.attributes.featuredImage.data.attributes.url}
+                        title={item.attributes.title}
+                        text={item.attributes.content.substring(0, 300) + "..."}
+                        id={item.id}
 
-            <Blog
-                imageUrl="/assets/images/slider3.jpg"
-                title="Lorem ipsum dolor sit amet consectetur"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit tortor, facilisis sed sapien sed, ultrices pellentesque erat.Donec a efficitur leo. Donec tempus nibh sed nulla sagittis, nec ornare augue placerat."
-                blogClass="d-flex flex-row-reverse"
-            />
-
-            <Blog
-                imageUrl="/assets/images/slider3.jpg"
-                title="Lorem ipsum dolor sit amet consectetur"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit tortor, facilisis sed sapien sed, ultrices pellentesque erat.Donec a efficitur leo. Donec tempus nibh sed nulla sagittis, nec ornare augue placerat."
-            />
+                    />
+                )
+            })
+            }
 
             <BottomBanner />
         </>

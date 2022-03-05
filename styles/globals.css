@@ -1263,6 +1263,7 @@ a {
 .content-banner .text-area {
     width: 65vh;
     position: relative;
+    bottom: 6rem !important;
 }
 
 .content-banner .text-area h1 {
