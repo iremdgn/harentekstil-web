@@ -123,7 +123,9 @@ a {
 .dropdown-menu .dropdown-item .img-text:hover::before {
     transform: translate3d(0, 0, 0);
 }
-
+.cat-menu .dropdown-menu.show{
+    width: 40vh !important;
+}
 /** Nabvar Mobile **/
 
 .mobile-navbar .container {

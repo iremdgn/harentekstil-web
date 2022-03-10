@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ProductPageSlider from '/src/components/ProductPageSlider'
 import Products from '/src/components/Products'
 import Banner from '/src/components/Banner'
 import HomeSliderBottom from '../../src/components/HomeSliderBottom'
+import { useRouter } from 'next/router'
 
 function ProductsPage() {
+    const router = useRouter();
+
+    
+    useEffect(() => {
+
+        if (!router.isReady) {
+            return;
+        }
+
+        const { category } = router.query;
+
+        if (category) {
+            console.log('cateogry', category)
+            // setId(blogPostId);
+            // getBlogPostData(blogPostId)
+        }
+
+    }, [router.isReady]);
+
+
     return (
         <>
             <ProductPageSlider />

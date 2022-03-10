@@ -3,7 +3,7 @@ import axios from 'axios';
 const config = {
     headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer 1771aa6577113d6d37358a82653098b3711f476dc76dc5e5710368cd5599c3703499dbef1aa70f2ec39834635a0c0b2ab1980efe56a84226dff8f8f3d5c82597184977e359997789f45e6d1e39f5a489b3f1875c93cdea37c00040a385afe28478260b430c2327a22002c3164ad06baf2a9b8cab2563a377277da3d4e2264f6f'
+        Authorization: 'Bearer 2f0193ed70439bd405659b26a21da6e0a33a5ca35574c022e8b197b84faff32925e64f78dc12b009c93cf42f184b4557087ea5f84ccaaf9c880ba0718455c1fecdcf934c1d5280ee863720291f401ebec56477e82c1989701a7bee56dab40ff882a619ca38140961a025ed50351235561bcb0e93eb0c780fa1efe0492add2692'
     }
 };
 
@@ -22,6 +22,21 @@ export const post = (request, data, token, type) => {
 
 export const get = (request, params, token) => {
     const customConfig = {...config, params: params}
+    
+    return new Promise((resolve, reject) => {
+        axios
+            .get(request, customConfig)
+            .then((response) => {
+                resolve(response);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+    });
+};
+
+export const getNoToken = (request, params) => {
+    const customConfig = { params: params}
     
     return new Promise((resolve, reject) => {
         axios

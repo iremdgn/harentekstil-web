@@ -1,24 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Nav, NavDropdown, Navbar, Container, Offcanvas, Button } from 'react-bootstrap'
 import Image from 'next/image'
 
+import { getNoToken } from '/src/services/request'
+import { imagesConfig } from '/config'
+
+
 function Menu() {
+    const [categories, setCategories] = useState([]);
+    const getTopCategories = async () => {
+        const response = await getNoToken('http://localhost:1337/api/product-category/getCategoryMenu/');
+        console.log('Not', response);
+        if (response.status == 200 && response.data.isSuccess) {
+            setCategories(response.data.cat[0].product_categories);
+        }
+    }
+    useEffect(() => {
+        getTopCategories();
+    }, [])
     return (
         <>
             <Nav className="desktop-navbar justify-content-center" >
 
                 <Nav.Link href="/home" eventKey="link-1">ANASAYFA</Nav.Link>
 
-                <NavDropdown title="ÜRÜNLERİMİZ" id="basic-nav-dropdown">
+                <NavDropdown title="ÜRÜNLERİMİZ"  className="cat-menu">
                     <NavDropdown.Item className="dropdown title" href="/products">KATEGORİLER <span></span></NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown subtitle " href="">Kategori 1</NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown subtitle " href="">Kategori 2</NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown subtitle " href="">Kategori 3</NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown subtitle " href="">Kategori 4</NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown subtitle " href="">Kategori 5</NavDropdown.Item>
+                    {categories.length > 0 && categories.map((item, key) => {
+                        return <NavDropdown.Item key={key} className="dropdown subtitle " href=""> {item.Name}</NavDropdown.Item>
+                    })}
                     <NavDropdown.Item className="dropdown subtitle-image pt-4" href="/product">
                         <Image className="dropdown-image" src="/assets/images/slider3.jpg" alt="slider1" width="180" height="120" />
-                        <p className="img-text pt-2">Ürünleri İnceleyin</p>
+                        <p className="img-text pt-2">Tüm Ürün Gruplarımız</p>
                     </NavDropdown.Item>
 
                 </NavDropdown>

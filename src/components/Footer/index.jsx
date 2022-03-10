@@ -13,7 +13,7 @@ function Footer() {
                         </span>
                         <span>HAREN TEKSTİL</span>
                     </h3>
-                    <p className="px-3 pt-3">Copyright © 2020 Haren Tekstil | All Rights Reserved | Designed By Redvizor</p>
+                    <p className="px-3 pt-3">Copyright © 2020 Haren Tekstil | All Rights Reserved | Designed By Red Vizor</p>
                 </div>
             </Container>
         </div>
