@@ -19,6 +19,18 @@ export const post = (request, data, token, type) => {
             });
     });
 };
+export const postNoToken = (request, data) => {
+    return new Promise((resolve, reject) => {
+        axios
+            .post(request, data)
+            .then((response) => {
+                resolve(response);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+    });
+};
 
 export const get = (request, params, token) => {
     const customConfig = {...config, params: params}

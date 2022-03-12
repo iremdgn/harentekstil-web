@@ -1,15 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ProductPageSlider from '/src/components/ProductPageSlider'
 import Products from '/src/components/Products'
 import Banner from '/src/components/Banner'
-import HomeSliderBottom from '../../src/components/HomeSliderBottom'
+
 import { useRouter } from 'next/router'
+import { getNoToken } from '/src/services/request'
 
 function ProductsPage() {
     const router = useRouter();
+    const [categories, setCategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState(null);
 
-    
     useEffect(() => {
+        categories.length == 0 && getCategories();
 
         if (!router.isReady) {
             return;
@@ -19,27 +22,43 @@ function ProductsPage() {
 
         if (category) {
             console.log('cateogry', category)
+            getSelectedCategories(category)
             // setId(blogPostId);
             // getBlogPostData(blogPostId)
         }
 
-    }, [router.isReady]);
+    }, [router.isReady,router]);
 
+    const getCategories = async () => {
+        const response = await getNoToken('http://localhost:1337/api/product-category/getSubCategories/');
+        if (response.data.isSuccess) {
+            setCategories(response.data.cat);
+        }
+    }
+
+    const getSelectedCategories = (route) => {
+        const category = categories.find((item) => item.route == route);
+        setSelectedCategory(category);
+    }
 
     return (
         <>
-            <ProductPageSlider />
-            <Banner 
-                imageUrl="/assets/images/homepage2.jpg"
-                title="Üstün Performanslı Ürünler"
-                text="Üstün ürünler sunma tutkumuz, bu ürünlerin performansıyla örtüşmektedir. Solmaya, yıpranmaya ve küflenmeye karşı dayanıklı, bakımı kolay ve teknik olarak üstün kumaşlarla olağanüstü mekanlar tasarlamak bizim işimiz."
-                bgColor="#F7A945"
-            />
-            
-            <Products 
-                Category="Tekne / Yat Kumaşları"
-            />
-            
+            {categories && categories.length > 0 && <ProductPageSlider categories={categories} getSelectedCategories={getSelectedCategories}/>}
+            {
+                selectedCategory != null && <>
+                    {selectedCategory.Banner && <Banner
+                        imageUrl={`http://localhost:1337${selectedCategory.Banner.Image.url}`} 
+                        title={selectedCategory.Banner.title}
+                        text={selectedCategory.Banner.text}
+                        bgColor={selectedCategory.Banner.bgColor}
+                    />}
+
+                    <Products
+                        Category={selectedCategory}
+                    />
+                </>
+            }
+
             {/* <HomeSliderBottom /> */}
         </>
     );

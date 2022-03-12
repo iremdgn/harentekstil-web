@@ -18,6 +18,7 @@ function Menu() {
     useEffect(() => {
         getTopCategories();
     }, [])
+
     return (
         <>
             <Nav className="desktop-navbar justify-content-center" >
@@ -27,7 +28,7 @@ function Menu() {
                 <NavDropdown title="ÜRÜNLERİMİZ"  className="cat-menu">
                     <NavDropdown.Item className="dropdown title" href="/products">KATEGORİLER <span></span></NavDropdown.Item>
                     {categories.length > 0 && categories.map((item, key) => {
-                        return <NavDropdown.Item key={key} className="dropdown subtitle " href=""> {item.Name}</NavDropdown.Item>
+                        return <NavDropdown.Item key={key} className="dropdown subtitle " href={`/kategori/${item.route}`}> {item.Name}</NavDropdown.Item>
                     })}
                     <NavDropdown.Item className="dropdown subtitle-image pt-4" href="/product">
                         <Image className="dropdown-image" src="/assets/images/slider3.jpg" alt="slider1" width="180" height="120" />

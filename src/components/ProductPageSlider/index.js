@@ -1,15 +1,12 @@
 import React from 'react'
 import ProductSwiperSlider from './productSwiperSlider'
 
-function ProductPageSlider() {
+function ProductPageSlider(props) {
     return (
         <>
             <div className="product-slider">
-
-                <ProductSwiperSlider />
-
+                <ProductSwiperSlider categories={props.categories} getSelectedCategories={props.getSelectedCategories}/>
             </div>
-
         </>
     )
 }

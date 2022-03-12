@@ -2,11 +2,13 @@ import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper"
 import { Card } from 'react-bootstrap'
+import { useRouter } from 'next/router'
 
 import "swiper/css"
 
 
-function ProductSwiperSlider() {
+function ProductSwiperSlider(props) {
+    const router = useRouter()
     return (
         <>
             <Swiper
@@ -15,12 +17,12 @@ function ProductSwiperSlider() {
                 spaceBetween={25}
                 breakpoints={{
                     940: {
-                        slidesPerView:4,
-                        spaceBetween:25
+                        slidesPerView: 4,
+                        spaceBetween: 25
                     },
                     340: {
-                        slidesPerView:2.5,
-                        spaceBetween:10
+                        slidesPerView: 2.5,
+                        spaceBetween: 10
                     }
                 }}
                 autoplay={{
@@ -33,39 +35,19 @@ function ProductSwiperSlider() {
                 className="mySwiper pt-5"
             >
 
-                <SwiperSlide>
-                    <Card>
-                        <Card.Img variant="top" src="/assets/images/homepage.jpg" />
-                        <Card.Body>
-                            <Card.Title className="text-center pt-lg-2">Tekne / Yat Kumaşları</Card.Title>
-                        </Card.Body>
-                    </Card>       
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Card>
-                        <Card.Img variant="top" src="/assets/images/homepage.jpg" />
-                        <Card.Body>
-                            <Card.Title className="text-center pt-lg-2">Bahçe Mobilyası / Sahil / Havuzbaşı Kumaşları</Card.Title>
-                        </Card.Body>
-                    </Card>       
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Card>
-                        <Card.Img variant="top" src="/assets/images/homepage.jpg" />
-                        <Card.Body>
-                            <Card.Title className="text-center pt-lg-2">Gölgeleme / Şemsiye / Branda Kumaşları</Card.Title>
-                        </Card.Body>
-                    </Card>       
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Card>
-                        <Card.Img variant="top" src="/assets/images/homepage.jpg" />
-                        <Card.Body>
-                            <Card.Title className="text-center pt-lg-2">Dış Mekan Fermuar ve Plastik Aksesuarlar</Card.Title>
-                        </Card.Body>
-                    </Card>       
-                </SwiperSlide>
-               
+                {props.categories.map((item, key) => {
+                    return <SwiperSlide key={key} className="touchable">
+                        <Card onClick={() => router.push({ pathname: item.route })}>
+                            {item.Image && item.Image.url && <Card.Img variant="top" src={`http://localhost:1337${item.Image.url}`} />}
+                            <Card.Body>
+                                <Card.Title className="text-center pt-lg-2">{item.Name}</Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </SwiperSlide>
+                })}
+
+
+
             </Swiper>
 
         </>

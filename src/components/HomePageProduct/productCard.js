@@ -1,12 +1,15 @@
 import React from 'react';
 import { Card } from 'react-bootstrap'
+import { useRouter } from 'next/router'
 
 function ProductCard(props) {
+    const router = useRouter()
+
+
     return (
         <>
-            <div className="product-card position-relative my-3 my-lg-0">
-                <Card>
-                    <a className="link-full" href={props.url}></a>
+            <div className="product-card position-relative my-3 my-lg-0 touchable">
+                <Card onClick={() => router.push({pathname : `/urun/${props.url}`})} >
                     <Card.Img src={props.src} alt={props.alt} />
                     <div className="product-card-overlay">
                         <Card.ImgOverlay>
