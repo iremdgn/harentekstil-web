@@ -78,7 +78,7 @@ function Menu() {
           </NavDropdown.Item>
           <NavDropdown.Item
             className="dropdown subtitle "
-            href="/abhakkimizdaout"
+            href="/hakkimizda"
           >
             Hizmetlerimiz
           </NavDropdown.Item>
@@ -155,7 +155,7 @@ function Menu() {
                 </NavDropdown>
 
                 <NavDropdown title="HAKKIMIZDA" id="basic-nav-dropdown">
-                  <NavDropdown.Item className="dropdown title" href="/about">
+                  <NavDropdown.Item className="dropdown title" href="/hakkimizda">
                     HAKKIMIZDA <span></span>
                   </NavDropdown.Item>
                   <NavDropdown.Item
