@@ -6,7 +6,7 @@ function BlogContent(props) {
         <div className="blog-content">
 
             <Row className={" " + props.contentClass}>
-                <Col xs={12} lg={6}>
+                <Col xs={12} xl={6}>
                     <div className="ps-lg-1 ms-lg-4 blog-text">
                         <p className="mini-title">{props.miniTitle}</p>
                         <h1>{props.title}</h1>
@@ -14,7 +14,7 @@ function BlogContent(props) {
                     </div>
 
                 </Col>
-                <Col  className="blog-image" xs={12} lg={6} style={{ backgroundImage: `url(${props.imageUrl})` }}>
+                <Col  className="blog-image" xs={12} xl={6} style={{ backgroundImage: `url(${props.imageUrl})` }}>
                     
                 </Col>
             </Row>

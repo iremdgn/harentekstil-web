@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import { useRouter } from "next/router";
 import { getNoToken } from "/src/services/request";
 
-import { imagesConfig } from "/config";
+import { apiConfig } from "/config";
 
 function OtherProductsSlider() {
   const router = useRouter();
@@ -21,7 +21,7 @@ function OtherProductsSlider() {
 
   const getCategory = async (data) => {
     const response = await getNoToken(
-      "http://localhost:1337/api/product-category/getLowLevelCategory/"
+      apiConfig.api + "/api/product-category/getLowLevelCategory/"
     );
     console.log("respsssonse", response);
     if (response.data.isSuccess) {
@@ -63,7 +63,7 @@ function OtherProductsSlider() {
                   return (
                     <SwiperSlide key={key}>
                       <ProductCard
-                        src={imagesConfig.api + item.Image.url}
+                        src={apiConfig.api + item.Image.url}
                         alt={item.Name}
                         title={item.Name}
                         text={item.subTitle}

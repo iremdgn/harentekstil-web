@@ -29,13 +29,13 @@ function SingleProduct(props) {
     <>
       <Container className="p-lg-5 p-3 single-product">
         <Row className="p-lg-4">
-          <Col xs={12} lg={6}>
+          <Col xs={12} xl={6}>
             <ProductSlider
               products={allProducts}
               setSelectedProduct={setSelectedProduct}
             />
           </Col>
-          <Col xs={12} lg={6} className="px-lg-4 py-lg-4">
+          <Col xs={12} xl={6} className="px-lg-4 py-lg-4">
             <div className="ps-lg-5 ms-lg-4 product-text mt-4 mt-lg-0">
               <h2>{selectedProduct.Name}</h2>
               <p>
@@ -49,8 +49,8 @@ function SingleProduct(props) {
                   {childCat.map((element, index) => {
                     console.log("element", element);
                     return (
-                      <Col key={index} lg={12}>
-                        <a href={element.route}>{element.Name}</a>
+                      <Col key={index} xl={12}>
+                        <a className="nav-link text-dark" href={element.route}>{element.Name}</a>
                       </Col>
                     );
                   })}

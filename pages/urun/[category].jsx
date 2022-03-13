@@ -4,6 +4,8 @@ import SingleProduct from "/src/components/SingleProduct";
 import { useRouter } from "next/router";
 import { postNoToken } from "/src/services/request";
 
+import { apiConfig } from "/config";
+
 function Product() {
   const router = useRouter();
   const [parentCat, setParentCat] = useState([]);
@@ -25,7 +27,7 @@ function Product() {
 
   const getCategory = async (data) => {
     const response = await postNoToken(
-      "http://localhost:1337/api/product-category/getProduct/",
+      apiConfig.api + "/api/product-category/getProduct/",
       data
     );
     console.log("response", response);

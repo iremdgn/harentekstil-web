@@ -5,6 +5,7 @@ import Banner from "/src/components/Banner";
 
 import { useRouter } from "next/router";
 import { getNoToken } from "/src/services/request";
+import { apiConfig } from "/config";
 
 function ProductsPage() {
   const router = useRouter();
@@ -27,12 +28,12 @@ function ProductsPage() {
 
   useEffect(() => {
     getSelectedCategories(categoryRoute);
-  }, [categories,categoryRoute]);
+  }, [categories, categoryRoute]);
 
   const getCategories = async () => {
     setCategories([]);
     const response = await getNoToken(
-      "http://localhost:1337/api/product-category/getSubCategories/"
+      apiConfig.api + "/api/product-category/getSubCategories/"
     );
     if (response.data.isSuccess) {
       setCategories(response.data.cat);
@@ -56,7 +57,7 @@ function ProductsPage() {
         <>
           {selectedCategory.Banner && (
             <Banner
-              imageUrl={`http://localhost:1337${selectedCategory.Banner.Image.url}`}
+              imageUrl={`${apiConfig.api + selectedCategory.Banner.Image.url}`}
               title={selectedCategory.Banner.title}
               text={selectedCategory.Banner.text}
               bgColor={selectedCategory.Banner.bgColor}

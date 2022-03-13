@@ -1,80 +1,75 @@
-import React, { useState, useEffect } from 'react'
-import Jumbotron from '/src/components/Jumbotron'
-import Blog from '/src/components/Blog'
-import BottomBanner from '/src/components/Blog/bottomBanner'
+import React, { useState, useEffect } from "react";
+import Jumbotron from "/src/components/Jumbotron";
+import Blog from "/src/components/Blog";
+import BottomBanner from "/src/components/Blog/bottomBanner";
 
-import { get } from '/src/services/request'
-import { imagesConfig } from '/config'
+import { get } from "/src/services/request";
+import { apiConfig } from "/config";
 
 function BlogPage() {
+  const [blogPage, setBlogPage] = useState(null);
 
-    const [blogPage, setBlogPage] = useState(null);
+  const [blogList, setBlogList] = useState(null);
 
-    const [blogList, setBlogList] = useState(null);
+  const getBlogJumbotron = async () => {
+    const response = await get(apiConfig.api + "/api/blog-page", {
+      populate: ["jumbotron", "jumbotron.image", "jumbotron.image.media"],
+    });
+    console.log("blogJumbotron", response);
 
-    const getBlogJumbotron = async () => {
-        const response = await get('http://localhost:1337/api/blog-page',
-            {
-                populate: [
-                    'jumbotron',
-                    'jumbotron.image',
-                    'jumbotron.image.media',
-                ]
-            });
-        console.log("blogJumbotron", response);
-
-        if (response.status === 200) {
-            setBlogPage(response.data.data.attributes);
-        }
+    if (response.status === 200) {
+      setBlogPage(response.data.data.attributes);
     }
+  };
 
-    const getBlogList = async () => {
-        const response = await get('http://localhost:1337/api/blogs',
-            {
-                populate: [
-                    'featuredImage',
-                    'featuredImage.media'
-                ]
-            });
-        console.log("blogList", response);
+  const getBlogList = async () => {
+    const response = await get(apiConfig.api + "/api/blogs", {
+      populate: ["featuredImage", "featuredImage.media"],
+    });
+    console.log("blogList", response);
 
-        if (response.status === 200) {
-            setBlogList(response.data.data);
-        }
+    if (response.status === 200) {
+      setBlogList(response.data.data);
     }
+  };
 
-    useEffect(() => {
-        getBlogJumbotron();
-        getBlogList();
-    }, []);
+  useEffect(() => {
+    getBlogJumbotron();
+    getBlogList();
+  }, []);
 
-    return (
+  return (
+    <>
+      {blogPage != null && (
+        <Jumbotron
+          imageUrl={
+            apiConfig.api + blogPage.jumbotron.image.data.attributes.url
+          }
+          title={blogPage.jumbotron.title}
+          text={blogPage.jumbotron.text}
+        />
+      )}
 
-        <>
-            {blogPage != null &&
-                <Jumbotron
-                    imageUrl={imagesConfig.api + blogPage.jumbotron.image.data.attributes.url}
-                    title={blogPage.jumbotron.title}
-                    text={blogPage.jumbotron.text}
-                />
-            }
+      {blogList != null &&
+        blogList.length > 0 &&
+        blogList.map((item, key) => {
+          return (
+            <Blog
+              key={key}
+              imageUrl={
+                apiConfig.api +
+                item.attributes.featuredImage.data.attributes.url
+              }
+              title={item.attributes.title}
+              text={item.attributes.content.substring(0, 300) + "..."}
+              id={item.id}
+            />
+          );
+        })}
 
-            {blogList != null && blogList.length > 0 && blogList.map((item, key) => {
-                return (
-                    <Blog key={key}
-                        imageUrl={imagesConfig.api + item.attributes.featuredImage.data.attributes.url}
-                        title={item.attributes.title}
-                        text={item.attributes.content.substring(0, 300) + "..."}
-                        id={item.id}
-
-                    />
-                )
-            })
-            }
-
-            <BottomBanner />
-        </>
-    );
+      <BottomBanner />
+    </>
+  );
 }
 
 export default BlogPage;

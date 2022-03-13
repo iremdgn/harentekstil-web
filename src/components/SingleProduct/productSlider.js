@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
+import { apiConfig } from "/config";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -15,7 +16,6 @@ import { FreeMode, Navigation, Thumbs } from "swiper";
 function ProductSlider(props) {
   const { products, setSelectedProduct } = props;
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
 
   return (
     <div className="single-product">
@@ -30,8 +30,10 @@ function ProductSlider(props) {
           return (
             <SwiperSlide key={index}>
               <Image
-                loader={()=> {return `http://localhost:1337${element.Images[0].url}`}}
-                src={`http://localhost:1337${element.Images[0].url}`}
+                loader={() => {
+                  return `${apiConfig.api + element.Images[0].url}`;
+                }}
+                src={`${apiConfig.api + element.Images[0].url}`}
                 alt={element.Name}
                 layout="fill"
               />
@@ -51,7 +53,7 @@ function ProductSlider(props) {
             spaceBetween: 10,
           },
         }}
-        onSlideChange={() => console.log('slide change')}
+        onSlideChange={() => console.log("slide change")}
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
@@ -59,10 +61,16 @@ function ProductSlider(props) {
       >
         {products.map((element, index) => {
           return (
-            <SwiperSlide key={index} onClick={() => setSelectedProduct(element)}>
+            <SwiperSlide
+              key={index}
+              onClick={() => setSelectedProduct(element)}
+            >
               <Image
-                loader={()=> {return `http://localhost:1337${element.Images[0].url}`}}
-                src={`http://localhost:1337${element.Images[0].url}`}
+                loader={() => {
+                  return `${apiConfig.api + element.Images[0].url}`;
+                }}
+                src={`${apiConfig.api + element.Images[0].url}`}
+                alt={element.Name}
                 layout="fill"
               />
             </SwiperSlide>

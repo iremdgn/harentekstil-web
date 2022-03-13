@@ -9,10 +9,10 @@ function Contact() {
         <>
             <Container className="p-lg-5 p-3">
                 <Row className="p-lg-5 p-3">
-                    <Col xs={12} lg={6}>
+                    <Col xs={12} xl={6}>
                        <ContactForm />
                     </Col>
-                    <Col xs={12} lg={6}>
+                    <Col xs={12} xl={6}>
                        <ContactInformation />
                     </Col>
                 </Row>

@@ -1,3 +1,3 @@
-export const imagesConfig = {
-    api: 'http://localhost:1337'
+export const apiConfig = {
+    api:  'http://localhost:1337'
 }

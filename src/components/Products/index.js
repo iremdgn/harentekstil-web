@@ -2,6 +2,8 @@ import React from "react";
 import ProductCard from "../HomePageProduct/productCard";
 import { Container, Row, Col } from "react-bootstrap";
 
+import { apiConfig } from "/config";
+
 function Products(props) {
   const { Category } = props;
 
@@ -15,11 +17,11 @@ function Products(props) {
             Category.product_categories &&
             Category.product_categories.map((item, key) => {
               return (
-                <Col key={key} xs={12} lg={6} className="py-3">
+                <Col key={key} xs={12} xl={6} className="py-3">
                   {item.Image && (
                     <ProductCard
                       url={item.route}
-                      src={`http://localhost:1337${item.Image.url}`}
+                      src={`${apiConfig.api + item.Image.url}`}
                       alt={item.Name}
                       title={item.Name}
                       text={item.subTitle}

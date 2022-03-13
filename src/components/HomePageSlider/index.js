@@ -7,7 +7,7 @@ function HomePageSlider(props) {
   return (
     <div className="home-slider">
       <Row className="homepage-slider mt-3">
-        <Col sm={12} lg={6} className="d-flex position-relative text-area">
+        <Col sm={12} xl={6} className="d-flex position-relative text-area">
           <div>
             <hr className="line"></hr>
             <div className="slider-text py-2">
@@ -24,7 +24,7 @@ function HomePageSlider(props) {
 
           </div>
         </Col>
-        <Col sm={12} lg={6} className="homepage-image" style={{ backgroundImage: `url(${props.imageUrl})` }}>
+        <Col sm={12} xl={6} className="homepage-image" style={{ backgroundImage: `url(${props.imageUrl})` }}>
 
         </Col>
       </Row>
