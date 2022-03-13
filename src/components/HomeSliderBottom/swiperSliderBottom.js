@@ -15,7 +15,6 @@ function SwiperSliderBottom(props) {
     return (
         <>
             <Swiper
-
                 slidesPerView={5}
                 spaceBetween={10}
                 breakpoints={{
