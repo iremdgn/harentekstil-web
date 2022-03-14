@@ -189,7 +189,7 @@ function Menu() {
                 </NavDropdown>
 
                 <Nav.Link href="/blog" eventKey="link-4">
-                  Blog
+                  BLOG
                 </Nav.Link>
 
                 <Nav.Link href="/iletisim" eventKey="link-4">

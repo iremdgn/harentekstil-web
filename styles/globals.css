@@ -1,1398 +1,1378 @@
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .row {
-    --bs-gutter-x: 0 !important;
+  --bs-gutter-x: 0 !important;
 }
 
-.custom-ratio{
-    position: relative;
+.custom-ratio {
+  position: relative;
 }
-.custom-ratio>* {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.custom-ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.ratio-1100x500{
-    padding-top: calc(((500 / 1100) * 100%)) !important;
+.ratio-1100x500 {
+  padding-top: calc(((500 / 1100) * 100%)) !important;
 }
 
 .link-full {
-    position: absolute !important;
-    left: 0 !important;
-    top: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 99 !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 99 !important;
 }
-.touchable{
-    cursor: pointer !important;
+.touchable {
+  cursor: pointer !important;
 }
 /* Header */
 
 /** Nabvar **/
 
 .navbar-brand {
-    margin-right: 0 !important;
+  margin-right: 0 !important;
 }
 .navbar a {
-    font-family: 'Cormorant SC', serif;
-    letter-spacing: 8px;
-    font-weight: 500;
+  font-family: "Cormorant SC", serif;
+  letter-spacing: 8px;
+  font-weight: 500;
 }
 
 .nav a,
 .nav .nav-dropdown a {
-    font-family: 'Poppins', sans-serif;
-    color: #000000;
-    font-weight: 300;
-    letter-spacing: 2.7px;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  font-weight: 300;
+  letter-spacing: 2.7px;
 }
 
 .nav a:hover {
-    color: #F7A945;
+  color: #f7a945;
 }
 
 .nav .nav-link:focus {
-    color: #F7A945 !important;
+  color: #f7a945 !important;
 }
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .dropdown-toggle::after {
-    display: none !important;
+  display: none !important;
 }
 
 .dropdown-menu {
-    border-radius: 0 !important;
-    margin-top: 0.8rem !important;
-    padding: 2.5rem 1rem !important;
-    width: 25vh;
-    border: none !important;
+  border-radius: 0 !important;
+  margin-top: 0.8rem !important;
+  padding: 2.5rem 1rem !important;
+  width: 25vh;
+  border: none !important;
 }
 
 .dropdown-menu .title {
-    letter-spacing: 2px !important;
-    font-weight: 500;
+  letter-spacing: 2px !important;
+  font-weight: 500;
 }
 
 .dropdown-menu .title:hover {
-    color: #000000;
+  color: #000000;
 }
 
 .dropdown-menu .subtitle {
-    letter-spacing: 0 !important;
-    font-size: 0.8rem;
-    padding: 10px auto;
-    color: #6e6b6b;
+  letter-spacing: 0 !important;
+  font-size: 0.8rem;
+  padding: 10px auto;
+  color: #6e6b6b;
 }
 
 .dropdown-menu .subtitle:hover {
-    color: #6e6b6b;
-    text-decoration: underline;
+  color: #6e6b6b;
+  text-decoration: underline;
 }
 
 .dropdown-item .dropdown-image {
-    object-fit: cover !important;
+  object-fit: cover !important;
 }
 
 .dropdown-menu .dropdown-item .img-text {
-    letter-spacing: 1px !important;
-    font-size: 0.9rem;
-    color: #000000;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
+  letter-spacing: 1px !important;
+  font-size: 0.9rem;
+  color: #000000;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
 }
 
 .dropdown-menu .dropdown-item .img-text::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 40%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #F7A945;
-    transform: translate3d(-100%, 0, 0);
-    transition: transform 0.3s ease;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f7a945;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.3s ease;
 }
 
 .dropdown-menu .dropdown-item .img-text:hover::before {
-    transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-.cat-menu .dropdown-menu.show{
-    width: 40vh !important;
+.cat-menu .dropdown-menu.show {
+  width: 40vh !important;
 }
 /** Nabvar Mobile **/
 
 .mobile-navbar .container {
-    flex-wrap: unset !important;
+  flex-wrap: unset !important;
 }
 
 .offcanvas-start {
-    top: 90px !important;
-    height: 100% !important;
-    background-color: rgba(0, 0, 0, 0.5) !important;
+  top: 90px !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .offcanvas-backdrop {
-    top: 90px !important;
+  top: 90px !important;
 }
 
 .offcanvas-body a {
-    color: #ffffff !important;
-    letter-spacing: 2px !important;
-    font-weight: 500;
+  color: #ffffff !important;
+  letter-spacing: 2px !important;
+  font-weight: 500;
 }
 
 .navbar-toggler {
-    border: none !important;
+  border: none !important;
 }
 
 @media (340px <=width <=1337px) {
-    .desktop-navbar {
-        display: none !important;
-    }
+  .desktop-navbar {
+    display: none !important;
+  }
 
-    .navbar.mobile-navbar {
-        display: block !important;
-    }
+  .navbar.mobile-navbar {
+    display: block !important;
+  }
 
-    .navbar.top-logo {
-        display: none !important;
-    }
+  .navbar.top-logo {
+    display: none !important;
+  }
 
-    .dropdown-menu {
-        margin-top:0 !important;
-        padding: 0 !important;
-        background-color: transparent !important;
-    }
+  .dropdown-menu {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+  }
 
-    .dropdown-menu .dropdown-item .img-text {
-        color: #ffffff;
-    }
-    
-    
+  .dropdown-menu .dropdown-item .img-text {
+    color: #ffffff;
+  }
 }
 
 /* Home Page Slider */
 
 .homepage-slider {
-    background-color: #F6F6F4;
-    height: 76vh;
+  background-color: #f6f6f4;
+  height: 76vh;
 }
 
 .slider-text {
-    margin-left: 15rem;
+  margin-left: 15rem;
 }
 
 .line {
-    border-top: 1px solid #000000;
-    width: 27%;
-    position: relative;
-    top: 11%;
+  border-top: 1px solid #000000;
+  width: 27%;
+  position: relative;
+  top: 11%;
 }
 
 .slider-text h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 4rem;
+  font-family: "DM Serif Display", serif;
+  font-size: 4rem;
 }
 
 .slider-text p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 200;
 }
 
 .homepage-slider .swiper {
-    width: 100%;
-    height: 35vh;
-    position: absolute;
-    bottom: 0;
+  width: 100%;
+  height: 35vh;
+  position: absolute;
+  bottom: 0;
 }
 
 .homepage-slider .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (340px <=width <=1337px) {
-    .homepage-slider .row {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    .line {
-        display: none;
-    }
-    .slider-text {
-        margin-left: 0;
-    }
-    .slider-text h1 {
-        font-size: 2.5rem;
-    }
-    .slider-text p {
-        font-size: 1.1rem;
-    }
-    .homepage-slider .swiper {
-        width: 100%;
-        height: 15vh;
-        top: 23.9rem;
-    }
-    .homepage-slider {
-        height: 100vh;
-    }
-    .homepage-slider .text-area {
-        height: 20vh;
-    }
-    .homepage-slider .homepage-image {
-        background-size: cover;
-        width: 100%;
-    }
+  .homepage-slider .row {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .line {
+    display: none;
+  }
+  .slider-text {
+    margin-left: 0;
+  }
+  .slider-text h1 {
+    font-size: 2.5rem;
+  }
+  .slider-text p {
+    font-size: 1.1rem;
+  }
+  .homepage-slider .swiper {
+    width: 100%;
+    height: 15vh;
+    top: 23.9rem;
+  }
+  .homepage-slider {
+    height: 100vh;
+  }
+  .homepage-slider .text-area {
+    height: 20vh;
+  }
+  .homepage-slider .homepage-image {
+    background-size: cover;
+    width: 100%;
+  }
 }
-
 
 /* Home Page Product */
 
 .product-card .card {
-    width: 550px;
-    height: 550px;
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 0;
-    border: none;
+  width: 550px;
+  height: 550px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 0;
+  border: none;
 }
 
 .product-card .card-img {
-    max-width: 100%;
-    transition: all 0.3s;
-    display: block;
-    width: 550px;
-    height: 550px;
-    transform: scale(1);
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 550px;
+  height: 550px;
+  transform: scale(1);
+  object-fit: cover;
 }
 
 .product-card .card-img-overlay {
-    border-radius: 0;
-    position: relative;
+  border-radius: 0;
+  position: relative;
 }
 
 .product-card-overlay {
-    background-color: #FFFFFF;
-    height: 10vh;
-    width: 25vh;
-    position: absolute;
-    bottom: 0 !important;
+  background-color: #ffffff;
+  height: 10vh;
+  width: 25vh;
+  position: absolute;
+  bottom: 0 !important;
 }
-.category-title{
-    font-family: 'DM Serif Display', serif;
-    font-weight: 500;
-    font-size: 3rem;
+.category-title {
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 3rem;
 }
 
 .product-card .card-title {
-    font-family: 'DM Serif Display', serif;
-    font-weight: 500;
-    font-size: 1.5rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .product-card .card-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    display: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  display: none;
 }
 
 .product-card:hover .product-card-overlay {
-    background-color: #000000;
-    height: 20vh;
-    width: 30vh;
-    color: #FFFFFF;
-    transition: 0.4s;
+  background-color: #000000;
+  height: 20vh;
+  width: 30vh;
+  color: #ffffff;
+  transition: 0.4s;
 }
 
 .product-card:hover .card-text {
-    display: block;
-    color: #FFFFFF;
+  display: block;
+  color: #ffffff;
 }
 
 .product-card:hover .card-img {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 @media (340px <=width <=1337px) {
-    .product-card .card {
-        width: 300px;
-        height: 300px;
-    }
-    .product-card .card-img {
-        width: 300px;
-        height: 300px;
-    }
-    .product-card-overlay {
-        background-color: #000000;
-        height: 8vh;
-        width: 100%;
-    }
-    .product-card .card-title {
-        font-size: 1.2rem;
-        color: #FFFFFF;
-        text-align: left !important;
-    }
-    .product-card .card-text {
-        font-size: 0.9rem;
-        display: none;
-        padding-top: 0.85rem;
-        text-align: left !important;
-    }
-    .product-card:hover .product-card-overlay {
-        width: 100%;
-    }
+  .product-card .card {
+    width: 300px;
+    height: 300px;
+  }
+  .product-card .card-img {
+    width: 300px;
+    height: 300px;
+  }
+  .product-card-overlay {
+    background-color: #000000;
+    height: 8vh;
+    width: 100%;
+  }
+  .product-card .card-title {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: left !important;
+  }
+  .product-card .card-text {
+    font-size: 0.9rem;
+    display: none;
+    padding-top: 0.85rem;
+    text-align: left !important;
+  }
+  .product-card:hover .product-card-overlay {
+    width: 100%;
+  }
 
-    .category-title{
-        font-size: 1.6rem;
-    }
+  .category-title {
+    font-size: 1.6rem;
+  }
 }
-
 
 /* Product & Service*/
 
 .product-service {
-    height: 60vh;
+  height: 60vh;
 }
 
 .product-service .mini-title {
-    font-family: 'Qwitcher Grypen', cursive;
-    font-size: 4rem;
+  font-family: "Qwitcher Grypen", cursive;
+  font-size: 4rem;
 }
 
 .product-service h1,
 .product-service .service-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 .product-service .text-area {
-    width: 85%;
+  width: 85%;
 }
 
 .product-service .text-area {
-    padding: 5rem 0 5rem 25rem;
+  padding: 5rem 0 5rem 25rem;
 }
 
 .product-service .product-service-area {
-    background-color: #F6F6F4;
+  background-color: #f6f6f4;
 }
 
 .product-service.flex-row-reverse .text-area {
-    padding: 5rem 20rem 5rem 7rem;
+  padding: 5rem 20rem 5rem 7rem;
 }
 
 @media (340px <=width <=1337px) {
+  .product-service {
+    height: 80%;
+  }
 
-    .product-service {
-        height: 80%;
-    }
-    
-    .product-service .text-area {
-        padding: 1.2rem 0;
-        width: 75%;
-        position: relative;
-        left: 3.5rem;
-    }
- 
-    .product-service .product-service-area {
-        background-color: #F6F6F4;
-    }
-    
-    .product-service.flex-row-reverse .text-area {
-        padding: 1.2rem 0;
-    }
+  .product-service .text-area {
+    padding: 1.2rem 0;
+    width: 75%;
+    position: relative;
+    left: 3.5rem;
+  }
 
-    .product-service .product-service-image {
-        background-size: cover;
-    }
-    
+  .product-service .product-service-area {
+    background-color: #f6f6f4;
+  }
+
+  .product-service.flex-row-reverse .text-area {
+    padding: 1.2rem 0;
+  }
+
+  .product-service .product-service-image {
+    background-size: cover;
+  }
 }
 
 /* Home Page Contact */
 
 .homepage-contact {
-    background-color: #F6F6F4;
+  background-color: #f6f6f4;
 }
 
 .homepage-contact h4 {
-    font-family: 'DM Serif Display', serif;
-    font-weight: 500;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
 }
 
 .homepage-contact p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 .homepage-contact .custom-button {
-    background-color: #0f10024d;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 1.1rem;
+  background-color: #0f10024d;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 .homepage-contact .custom-button:hover {
-    background-color: #000000;
-    color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 @media (340px <=width <=1337px) {
-    
-    .homepage-contact {
-        text-align: center;
-    }
-
+  .homepage-contact {
+    text-align: center;
+  }
 }
-
 
 /* Home Page Visual Card  */
 
-.home-visual .row>* {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+.home-visual .row > * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .visual-card .card {
-    width: 100%;
-    height: 37vh;
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 0;
-    border: none;
+  width: 100%;
+  height: 37vh;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 0;
+  border: none;
 }
 
 .visual-card .card-img {
-    max-width: 100%;
-    transition: all 0.3s;
-    display: block;
-    width: 100%;
-    height: auto;
-    transform: scale(1);
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
 }
 
 .visual-card .card-img-overlay {
-    border-radius: 0;
-    position: relative;
+  border-radius: 0;
+  position: relative;
 }
 
 .visual-card-overlay {
-    position: absolute;
-    bottom: 0 !important;
-    background-color: #FFFFFF;
-    height: 7vh;
-    width: 23vh;
+  position: absolute;
+  bottom: 0 !important;
+  background-color: #ffffff;
+  height: 7vh;
+  width: 23vh;
 }
 
 .visual-card .card-title {
-    font-family: 'DM Serif Display', serif;
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 0.95rem;
-    letter-spacing: 0.1rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 0.95rem;
+  letter-spacing: 0.1rem;
 }
 
 .visual-card .card-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    display: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  display: none;
 }
 
 .visual-card:hover .visual-card-overlay {
-    height: 25vh;
-    width: 30vh;
-    transition: 0.4s;
-    padding-top: 2.5rem;
+  height: 25vh;
+  width: 30vh;
+  transition: 0.4s;
+  padding-top: 2.5rem;
 }
 
 .visual-card:hover .card-text {
-    display: block;
+  display: block;
 }
 
 .visual-card:hover .card-img {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .visual-card-large .card {
-    overflow: hidden;
-    border-radius: 0;
-    border: none;
+  overflow: hidden;
+  border-radius: 0;
+  border: none;
 }
 
 .visual-card-large .card-img {
-    height: 74vh !important;
-    transition: all 0.3s;
-    display: block;
-    transform: scale(1);
+  height: 74vh !important;
+  transition: all 0.3s;
+  display: block;
+  transform: scale(1);
 }
 
 .visual-card-large .card-img-overlay {
-    padding: 2rem 5rem 5rem 17rem;
-    background-color: #FFFFFF;
-    height: 25vh;
-    width: 75vh;
-    border-radius: 0;
-    position: absolute;
-    top: 67%;
+  padding: 2rem 5rem 5rem 17rem;
+  background-color: #ffffff;
+  height: 25vh;
+  width: 75vh;
+  border-radius: 0;
+  position: absolute;
+  top: 67%;
 }
 
 .visual-card-large .card-title {
-    font-family: 'DM Serif Display', serif;
-    font-weight: 500;
-    font-size: 2rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 .visual-card-large .card-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 .visual-card-large:hover .card-img {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .visual-card-large button {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500 !important;
-    letter-spacing: 0.1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500 !important;
+  letter-spacing: 0.1rem;
 }
 
 @media (340px <=width <=1337px) {
+  .visual-card-large .card-img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .visual-card-large .card-img-overlay {
+    padding: 1rem;
+    background-color: #ffffff;
+    width: 100%;
+  }
 
-    .visual-card-large .card-img {
-        height: 100%;
-        object-fit: cover;
-    }
-    .visual-card-large .card-img-overlay {
-        padding: 1rem;
-        background-color: #FFFFFF;
-        width: 100%;
-    }
- 
-    .visual-card .card {
-        width: 100%;
-        height: 100%;
-    }
-    .visual-card .card-img {
-        object-fit: cover;
-    }
+  .visual-card .card {
+    width: 100%;
+    height: 100%;
+  }
+  .visual-card .card-img {
+    object-fit: cover;
+  }
 
-    .visual-card .card-title {
-        color: #FFFFFF;
-    }
+  .visual-card .card-title {
+    color: #ffffff;
+  }
 
-    .visual-card-overlay {
-        height: 7vh;
-        width: 100%;
-        background-color: #000000;
-    }
+  .visual-card-overlay {
+    height: 7vh;
+    width: 100%;
+    background-color: #000000;
+  }
 
-    .visual-card:hover .visual-card-overlay {
-        height: 15vh;
-        width: 100%;
-        padding: 0.5rem 0;
-    }
-    .visual-card:hover .card-text {
-        color: #FFFFFF;
-    }
-    
+  .visual-card:hover .visual-card-overlay {
+    height: 15vh;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  .visual-card:hover .card-text {
+    color: #ffffff;
+  }
 }
 
 /* Home Page Product Bottom */
 
 .product-card-bottom .card {
-    width: 550px;
-    height: 400px;
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 0;
-    border: none;
+  width: 550px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 0;
+  border: none;
 }
 
 .product-card-bottom .card-img {
-    max-width: 100%;
-    transition: all 0.3s;
-    display: block;
-    width: 100%;
-    height: auto;
-    transform: scale(1);
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
 }
 
 .product-card-bottom .card-img-overlay {
-    border-radius: 0;
-    position: relative;
+  border-radius: 0;
+  position: relative;
 }
 
 .product-card-bottom-overlay {
-    background-color: #FFFFFF;
-    height: 6vh;
-    width: 18vh;
-    position: absolute;
-    bottom: 0 !important;
+  background-color: #ffffff;
+  height: 6vh;
+  width: 18vh;
+  position: absolute;
+  bottom: 0 !important;
 }
 
 .product-card-bottom .card-title {
-    font-family: 'DM Serif Display', serif;
-    font-weight: 500;
-    font-size: 1.7rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 1.7rem;
 }
 
 .product-card-bottom .card-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    display: none;
-    font-size: 0.95rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  display: none;
+  font-size: 0.95rem;
 }
 
 .product-card-bottom:hover .product-card-bottom-overlay {
-    background-color: #000000;
-    height: 23vh;
-    width: 33vh;
-    color: #FFFFFF;
-    transition: 0.4s;
-    padding-top: 1rem;
+  background-color: #000000;
+  height: 23vh;
+  width: 33vh;
+  color: #ffffff;
+  transition: 0.4s;
+  padding-top: 1rem;
 }
 
 .product-card-bottom:hover .card-text {
-    display: block;
-    color: #FFFFFF;
+  display: block;
+  color: #ffffff;
 }
 
 .product-card-bottom:hover .card-img {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 @media (340px <=width <=1337px) {
-    .home-bottom-product {
-        padding: 4rem 0;
-    }
+  .home-bottom-product {
+    padding: 4rem 0;
+  }
 
-    .product-card-bottom .card {
-        width: 300px;
-        height: 200px;
-    }
+  .product-card-bottom .card {
+    width: 300px;
+    height: 200px;
+  }
 
-    .product-card-bottom .card-img {
-        width: 300px;
-        height: 200px;
-        object-fit: cover;
-    }
+  .product-card-bottom .card-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
 
-    .product-card-bottom-overlay  {
-        background-color: #000000;
-        width: 100%;
-        height: 6vh;
-    }
-    .product-card-bottom .card-title {
-        font-size: 1.2rem;
-        color: #FFFFFF;
-        text-align: left !important;
-    }
-    .product-card-bottom .card-text {
-        font-size: 0.8rem;
-        text-align: left !important;
-    }
-    .product-card-bottom:hover .product-card-bottom-overlay {
-        height: 12vh;
-        width: 100%;
-        padding-top: 0;
-    }
+  .product-card-bottom-overlay {
+    background-color: #000000;
+    width: 100%;
+    height: 6vh;
+  }
+  .product-card-bottom .card-title {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: left !important;
+  }
+  .product-card-bottom .card-text {
+    font-size: 0.8rem;
+    text-align: left !important;
+  }
+  .product-card-bottom:hover .product-card-bottom-overlay {
+    height: 12vh;
+    width: 100%;
+    padding-top: 0;
+  }
 }
 
 /* Home Page Bottom Slider */
 
 .slider-bottom {
-    background-color: #F6F6F4;
-    height: 90vh;
+  background-color: #f6f6f4;
+  height: 90vh;
 }
 
 .slider-bottom h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
 }
 
 .slider-bottom hr {
-    border-top: 1px solid #000000;
-    width: 38%;
+  border-top: 1px solid #000000;
+  width: 38%;
 }
 
 .slider-bottom .swiper {
-    width: 100%;
-    height: 50vh;
+  width: 100%;
+  height: 50vh;
 }
 
 .slider-bottom .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (340px <=width <=1337px) {
+  .slider-bottom {
+    height: 55vh;
+  }
 
-    .slider-bottom {
-        height: 55vh;
-    }
-    
-    .slider-bottom h1 {
-        font-size: 2.5rem;
-    }
-    
-    .slider-bottom hr {
-        width: 25%;
-    }
-    
-    .slider-bottom .swiper {
-        width: 100%;
-        height: 25vh;
-    }
-    
+  .slider-bottom h1 {
+    font-size: 2.5rem;
+  }
+
+  .slider-bottom hr {
+    width: 25%;
+  }
+
+  .slider-bottom .swiper {
+    width: 100%;
+    height: 25vh;
+  }
 }
 
 /* Footer */
 
 .footer {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .footer h3 {
-    color: #FFFFFF;
-    font-family: 'Cormorant SC', serif;
-    letter-spacing: 0.5rem;
-    font-weight: 600;
+  color: #ffffff;
+  font-family: "Cormorant SC", serif;
+  letter-spacing: 0.5rem;
+  font-weight: 600;
 }
 
 .footer p {
-    color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.1rem;
-    font-size: 0.7rem;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
 }
 
-
 /* Product Page Slider */
-
 .product-slider {
-    background-color: #F6F6F4;
-    height: 32vh;
+  background-color: #f6f6f4;
 }
 
 .product-slider .swiper {
-    width: 45%;
-    height: 35vh;
+  width: 60%;
 }
 
 .product-slider .card {
-    border-radius: 0 !important;
-    border: none;
-    background-color: #F6F6F4;
-    height: 23vh;
+  border-radius: 0 !important;
+  border: none;
+  background-color: #f6f6f4;
+}
+
+.product-slider .card-img-top {
+  height: 180px;
+  object-fit: cover;
 }
 
 .product-slider .card-title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
 }
 
 .product-slider .card:hover {
-    box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 25px 0px;
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 25px 0px;
 }
 
 .product-slider .swiper-slide:hover {
-    position: relative;
-    top: -10px;
+  position: relative;
+  top: -10px;
 }
 
 @media (340px <=width <=1337px) {
+  .product-slider {
+    height: 25vh;
+  }
 
-    .product-slider {
-        height: 25vh;
-    }
+  .product-slider .swiper {
+    width: 70%;
+    height: 100%;
+  }
 
-    .product-slider .swiper {
-        width: 70%;
-        height: 100%;
-    }
+  .product-slider .swiper .card {
+    height: 90%;
+  }
 
-    .product-slider .swiper .card {
-        height: 90%;
-    }
-    
-    .product-slider .card-title {
-        font-size: 0.7rem;
-    }
-    
+  .product-slider .card-title {
+    font-size: 0.7rem;
+  }
 }
 
 /* Banner */
 
 .banner {
-    background-color: #FFFFFF;
-    padding: 100px 0;
+  background-color: #ffffff;
+  padding: 100px 0;
 }
 
 .banner .banner-area {
-    width: 65%;
-    background-color: #F6F6F4;
+  width: 65%;
+  background-color: #f6f6f4;
 }
 
 .banner .text-area {
-    padding: 5rem 7rem  ;
+  padding: 5rem 7rem;
 }
 
 .banner .banner-text h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
 }
 
 .banner .banner-text p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5;
-    font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5;
+  font-weight: 300;
 }
 
 @media (340px <=width <=1337px) {
-    .banner {
-       
-    }
-    
-    .banner .banner-area {
-        width: 85%;
-    }
-    
-    .banner .text-area {
-        text-align: center;
-        padding: 6rem 1rem;
-    }
+  .banner {
+  }
 
-    
-    .banner .banner-text  {
-    }
-    
-    .banner .banner-text h1 {
-        font-size: 2rem;
-    }
-    
-    .banner .banner-text p {
-        font-size: 1rem;
-    }
+  .banner .banner-area {
+    width: 85%;
+  }
 
-    .banner-image {
-        background-size: cover;
-    }
+  .banner .text-area {
+    text-align: center;
+    padding: 6rem 1rem;
+  }
+
+  .banner .banner-text {
+  }
+
+  .banner .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner .banner-text p {
+    font-size: 1rem;
+  }
+
+  .banner-image {
+    background-size: cover;
+  }
 }
 
 /* Jumbotron */
 
 .jumbotron {
-    background-color: #F7A945;
+  background-color: #f7a945;
 }
 
 .jumbotron .jumbotron-text {
-    margin-left: 15rem;
-    padding: 7rem 5rem !important;
+  margin-left: 15rem;
+  padding: 7rem 5rem !important;
 }
 
 .jumbotron hr {
-    border-top: 2px solid #FFFFFF;
-    width: 18rem;
-    position: relative;
-    top: 32%;
+  border-top: 2px solid #ffffff;
+  width: 18rem;
+  position: relative;
+  top: 32%;
 }
 
 .jumbotron .text-area h1 {
-    color: #F6F6F4;
-    font-family: 'DM Serif Display', serif;
-    font-size: 4rem;
+  color: #f6f6f4;
+  font-family: "DM Serif Display", serif;
+  font-size: 4rem;
 }
 
 .jumbotron .text-area p {
-    color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25;
-    font-weight: 300;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25;
+  font-weight: 300;
 }
 
 .jumbotron-image {
-    background-size: cover;
+  background-size: cover;
+}
+
+@media (340px <=width <=884px) {
+  .product-service .product-service-image {
+    height: 35vh;
+  }
 }
 
 @media (340px <=width <=1337px) {
-
-.jumbotron {
+  .jumbotron {
     padding: 100px 0;
-}
+  }
 
-.jumbotron hr {
+  .jumbotron hr {
     display: none;
-}
-    
-.jumbotron .jumbotron-image{
-    display: none;
-}
+  }
 
-.jumbotron .jumbotron-text {
+  .jumbotron .jumbotron-image {
+    display: none;
+  }
+
+  .jumbotron .jumbotron-text {
     margin-left: 0;
     padding: 2.5rem !important;
-}
+  }
 
-.jumbotron .text-area h1 {
+  .jumbotron .text-area h1 {
     font-size: 3rem;
-}
-
+  }
 }
 
 /* Contact */
 
 .contact h1 {
-    font-family: 'Cormorant SC', serif;
-    font-weight: 700;
-    font-size: 3rem;
-    color: #383636
+  font-family: "Cormorant SC", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #383636;
 }
 
 .contact span {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 .contact a {
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    color: #F7A945;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: #f7a945;
 }
 
 .contact button {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: #F6F6F4;
-    width: 100%;
-    background-color: #F7A945;
-    border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #f6f6f4;
+  width: 100%;
+  background-color: #f7a945;
+  border: none;
 }
 
 .contact button:hover {
-    color: #F6F6F4;
-    background-color: #000000e8;
+  color: #f6f6f4;
+  background-color: #000000e8;
 }
 
 .contact .form-control::placeholder {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.85rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
 }
 
 @media (340px <=width <=1337px) {
-    .contact h1 {
-        font-size: 2.5rem;
-    }
+  .contact h1 {
+    font-size: 2.5rem;
+  }
 }
-
 
 /* Single Product Page */
 
 .single-product .gallery-top {
-    height: 45vh;
-    width: 70vh;
+  height: 45vh;
+  width: 70vh;
 }
 
 .single-product .gallery-thumbs {
-    height: 100px;
-    width: 70vh;
+  height: 100px;
+  width: 70vh;
 }
 
 .single-product .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .single-product .gallery-thumbs .swiper-slide {
-    opacity: 0.4;
+  opacity: 0.4;
 }
 
 .single-product .gallery-thumbs .swiper-slide-thumb-active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .single-product .product-text {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .single-product .product-text h1 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .single-product .product-text p {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .single-product .product-text span {
-    font-weight: 200;
-    font-size: 1.3rem;
-    color: #797575;
+  font-weight: 200;
+  font-size: 1.3rem;
+  color: #797575;
 }
 
 /** Other Products Slider **/
 
 .other-products {
-    background-color: #F6F6F4;
-    height: 70vh;
+  background-color: #f6f6f4;
+  height: 70vh;
 }
 
 .other-products h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
 }
 
 .other-products hr {
-    border-top: 1px solid #000000;
-    width: 38%;
+  border-top: 1px solid #000000;
+  width: 38%;
 }
 
 .other-products .swiper {
-    width: 100%;
-    height: 50vh;
+  width: 100%;
+  height: 50vh;
 }
 
 .other-products .swiper-slide .card {
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
 }
 
 .other-products .swiper-slide .card-img {
-    display: block;
-    width: 400px;
-    height: 400px;
+  display: block;
+  width: 400px;
+  height: 400px;
 }
-
 
 @media (340px <=width <=1337px) {
-    .single-product .gallery-top {
-        width: 100%;
-    }
-    
-    .single-product .gallery-thumbs {
-        height: 60px;
-        width: 100%;
-    }
-    
-    .other-products {
-        height: 75vh;
-    }
-    
-    .other-products h1 {
-        font-size: 2.5rem;
-    }
+  .single-product .gallery-top {
+    width: 100%;
+  }
 
-    .other-products hr {
-        width: 25%;
-    }
+  .single-product .gallery-thumbs {
+    height: 60px;
+    width: 100%;
+  }
 
-    .other-products .swiper {
-        width: 100%;
-        height: 50vh;
-    }
-   
-    .other-products .swiper-slide .card {
-        width: 300px;
-        height: 300px;
-    }
-    
-    .other-products .swiper-slide .card-img {
-        width: 300px;
-        height: 300px;
-    }
+  .other-products {
+    height: 75vh;
+  }
+
+  .other-products h1 {
+    font-size: 2.5rem;
+  }
+
+  .other-products hr {
+    width: 25%;
+  }
+
+  .other-products .swiper {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .other-products .swiper-slide .card {
+    width: 300px;
+    height: 300px;
+  }
+
+  .other-products .swiper-slide .card-img {
+    width: 300px;
+    height: 300px;
+  }
 }
-
 
 /* Blog Page */
 
 .blog .blog-text h1 {
-    font-family: 'DM Serif Display', serif;
-    font-weight: 500;
-    font-size: 3rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 3rem;
 }
 
 .blog .blog-text p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 .blog .blog-text button {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    background-color: #F7A945;
-    border: none;
-    border-radius: 0;
-    width: 50%;
-    letter-spacing: 0.1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background-color: #f7a945;
+  border: none;
+  border-radius: 0;
+  width: 50%;
+  letter-spacing: 0.1rem;
 }
 
 .blog .blog-text button a {
-    color: #FFFFFF;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .blog .blog-text button:hover {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 @media (340px <=width <=1337px) {
-    .blog .blog-text h1 {
-        font-size: 2.5rem;
-    }
+  .blog .blog-text h1 {
+    font-size: 2.5rem;
+  }
 
-    .blog .blog-text button {
-        width: 100%;
-    }
-
+  .blog .blog-text button {
+    width: 100%;
+  }
 }
-
 
 /** Bottom Banner **/
 
 .bottom-banner {
-    height: 70vh;
+  height: 70vh;
 }
 
 .bottom-banner .text-area {
-    background-color: #F6F6F4;
-    width: 80vh;
-    height: 40vh;
-    padding: 5rem 7rem;
-    text-align: center;
+  background-color: #f6f6f4;
+  width: 80vh;
+  height: 40vh;
+  padding: 5rem 7rem;
+  text-align: center;
 }
 
 .bottom-banner .text-area h1 {
-    font-family: 'DM Serif Display', serif;
-    font-weight: 500;
-    font-size: 2.5rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 2.5rem;
 }
 
 .bottom-banner .text-area p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 .bottom-banner .text-area button {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    background-color: #F6F6F4;
-    border: 1px solid #000000;
-    border-radius: 0;
-    width: 40%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background-color: #f6f6f4;
+  border: 1px solid #000000;
+  border-radius: 0;
+  width: 40%;
 }
 
 .bottom-banner .text-area button a {
-    color: #000000;
-    letter-spacing: 0.1rem;
-    text-decoration: none;
+  color: #000000;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
 }
 
 .bottom-banner .text-area button:hover {
-    background-color: #000000;
-    color: #F6F6F4;
+  background-color: #000000;
+  color: #f6f6f4;
 }
 
 .bottom-banner .text-area button a:hover {
-    color: #F6F6F4;
+  color: #f6f6f4;
 }
 
 @media (340px <=width <=1337px) {
-  
-.bottom-banner {
+  .bottom-banner {
     height: 60vh;
     background-size: cover;
-}
+  }
 
-.bottom-banner .text-area {
+  .bottom-banner .text-area {
     width: 85%;
     height: 80%;
     padding: 3rem;
-}
+  }
 
-.bottom-banner .text-area h1 {
+  .bottom-banner .text-area h1 {
     font-size: 2rem;
-}
+  }
 
-.bottom-banner .text-area button {
+  .bottom-banner .text-area button {
     width: 100%;
-}
-
+  }
 }
 
 /* Blog Content Page */
 
-
 /** Blog Content Banner **/
 
 .content-banner {
-    height: 90vh;
-    position: relative;
-    background-size: contain !important;
+  height: 90vh;
+  position: relative;
+  background-size: contain !important;
 }
 
 .content-banner::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.301);
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.301);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .content-banner .text-area {
-    width: 65vh;
-    position: relative;
-    bottom: 6rem !important;
+  width: 65vh;
+  position: relative;
+  bottom: 6rem !important;
 }
 
 .content-banner .text-area h1 {
-    font-family: 'DM Serif Display', serif;
-    font-weight: 500;
-    font-size: 4rem;
-    color: #F6F6F4;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 4rem;
+  color: #f6f6f4;
 }
 
 .content-banner .text-area p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 1.25;
-    color: #F6F6F4;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.25;
+  color: #f6f6f4;
 }
 
 .content-banner hr {
-    border-top: 2px solid #FFFFFF;
-    background-color: #FFFFFF;
-    width: 15rem;
-    position: relative;
-    bottom: 6rem;
+  border-top: 2px solid #ffffff;
+  background-color: #ffffff;
+  width: 15rem;
+  position: relative;
+  bottom: 6rem;
 }
 
 @media (340px <=width <=1337px) {
-    .content-banner {
-        height: 70vh;
-        padding: 0 2rem;
-    }
-    
-    .content-banner .text-area h1 {
-        font-size: 3.5rem;
-    }
-    
-    .content-banner hr {
-      display:none;
-    }
+  .content-banner {
+    height: 70vh;
+    padding: 0 2rem;
+  }
+
+  .content-banner .text-area h1 {
+    font-size: 3.5rem;
+  }
+
+  .content-banner hr {
+    display: none;
+  }
 }
 
 /** Blog Content Text **/
 
 .blog-content .blog-text {
-    width: 60vh;
-    position: relative;
-    left: 30%;
-    padding: 5rem;
+  width: 60vh;
+  position: relative;
+  left: 30%;
+  padding: 5rem;
 }
 
 .blog-content .mini-title {
-    font-family: 'Qwitcher Grypen', cursive !important;
-    font-size: 4rem;
+  font-family: "Qwitcher Grypen", cursive !important;
+  font-size: 4rem;
 }
 
 .blog-content .blog-text h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 2.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 2.6rem;
 }
 
 .blog-content .blog-text p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 @media (340px <=width <=1337px) {
-    .blog-content .blog-text {
-        width: 100%;
-        left: 0;
-        padding: 0 2rem;
-    }
-    
-    .blog-content .mini-title {
-        font-size: 3.5rem;
-    }
-    
-    .blog-content .blog-text h1 {
-        font-size: 2.3rem;
-    }
+  .blog-content .blog-text {
+    width: 100%;
+    left: 0;
+    padding: 0 2rem;
+  }
 
-    .blog-content .blog-image {
-        width: 100%;
-        height: 40vh;
-        background-size: cover;
-    }
+  .blog-content .mini-title {
+    font-size: 3.5rem;
+  }
+
+  .blog-content .blog-text h1 {
+    font-size: 2.3rem;
+  }
+
+  .blog-content .blog-image {
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+  }
 }
-
 
 /** Other Content Slider **/
 
 .other-content {
-    background-color: #F6F6F4;
-    height: 60vh;
+  background-color: #f6f6f4;
+  height: 60vh;
 }
 
 .other-content h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
 }
 
 .other-content hr {
-    border-top: 1px solid #000000;
-    width: 38%;
+  border-top: 1px solid #000000;
+  width: 38%;
 }
 
 @media (340px <=width <=1337px) {
-    .other-content {
-        height: 50vh;
-    }
-    
-    .other-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .other-content hr {
-        width: 25%;
-    }
+  .other-content {
+    height: 50vh;
+  }
+
+  .other-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .other-content hr {
+    width: 25%;
+  }
 }
