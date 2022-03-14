@@ -5,17 +5,18 @@ import Contact from "/src/components/Contact";
 import { get } from "/src/services/request";
 import { apiConfig } from "/config";
 
-function ContactPage() {
+function ContactPage(props) {
+  const { setPreloader } = props;
   const [contactPage, setContactPage] = useState(null);
 
   const getContactData = async () => {
     const response = await get(apiConfig.api + "/api/contact-page", {
       populate: ["jumbotron", "jumbotron.image", "jumbotron.image.media"],
     });
-    console.log(response);
 
     if (response.status === 200) {
       setContactPage(response.data.data.attributes);
+      setPreloader(false);
     }
   };
 

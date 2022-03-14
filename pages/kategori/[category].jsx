@@ -7,7 +7,8 @@ import { useRouter } from "next/router";
 import { getNoToken } from "/src/services/request";
 import { apiConfig } from "/config";
 
-function ProductsPage() {
+function ProductsPage(props) {
+  const { setPreloader } = props;
   const router = useRouter();
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -28,6 +29,8 @@ function ProductsPage() {
 
   useEffect(() => {
     getSelectedCategories(categoryRoute);
+    
+    setPreloader(false);
   }, [categories, categoryRoute]);
 
   const getCategories = async () => {
@@ -49,6 +52,7 @@ function ProductsPage() {
     <>
       {categories && categories.length > 0 && (
         <ProductPageSlider
+          setPreloader={setPreloader}
           categories={categories}
           getSelectedCategories={getSelectedCategories}
         />

@@ -5,7 +5,7 @@ function ProductPageSlider(props) {
     return (
         <>
             <div className="product-slider">
-                <ProductSwiperSlider categories={props.categories} getSelectedCategories={props.getSelectedCategories}/>
+                <ProductSwiperSlider setPreloader={props.setPreloader} categories={props.categories} getSelectedCategories={props.getSelectedCategories}/>
             </div>
         </>
     )

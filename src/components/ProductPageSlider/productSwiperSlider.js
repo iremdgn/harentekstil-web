@@ -8,6 +8,7 @@ import { apiConfig } from "/config";
 import "swiper/css";
 
 function ProductSwiperSlider(props) {
+  const { setPreloader } = props;
   const router = useRouter();
   return (
     <>
@@ -34,7 +35,14 @@ function ProductSwiperSlider(props) {
         {props.categories.map((item, key) => {
           return (
             <SwiperSlide key={key} className="touchable">
-              <Card onClick={() => router.push({ pathname: item.route })}>
+              <Card
+                onClick={async () => {
+                  setPreloader(true);
+                  setTimeout(() => {
+                    router.push({ pathname: item.route });
+                  }, 1000);
+                }}
+              >
                 {item.Image && item.Image.url && (
                   <Card.Img
                     variant="top"

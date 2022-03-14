@@ -6,7 +6,8 @@ import BottomBanner from "/src/components/Blog/bottomBanner";
 import { get } from "/src/services/request";
 import { apiConfig } from "/config";
 
-function BlogPage() {
+function BlogPage(props) {
+  const { setPreloader } = props;
   const [blogPage, setBlogPage] = useState(null);
 
   const [blogList, setBlogList] = useState(null);
@@ -30,6 +31,7 @@ function BlogPage() {
 
     if (response.status === 200) {
       setBlogList(response.data.data);
+      setPreloader(false);
     }
   };
 
@@ -63,6 +65,7 @@ function BlogPage() {
               title={item.attributes.title}
               text={item.attributes.content.substring(0, 300) + "..."}
               id={item.id}
+              route={item.attributes.route}
             />
           );
         })}

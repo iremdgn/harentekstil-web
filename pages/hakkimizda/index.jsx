@@ -6,7 +6,8 @@ import ProductService from "/src/components/ProductService";
 import { get } from "/src/services/request";
 import { apiConfig } from "/config";
 
-function AboutPage() {
+function AboutPage(props) {
+  const { setPreloader } = props;
   const [aboutPage, setAboutPage] = useState(null);
 
   const getAboutPageData = async () => {
@@ -26,6 +27,7 @@ function AboutPage() {
     console.log(response);
     if (response.status === 200) {
       setAboutPage(response.data.data.attributes);
+      setPreloader(false);
     }
   };
 

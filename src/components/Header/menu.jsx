@@ -198,14 +198,14 @@ function Menu() {
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="/">
             <span>HAREN</span>
             <span className="mx-2">
               <Image
                 src="/assets/images/logo.jpg"
                 alt="logo"
-                width="40"
-                height="40"
+                width="30"
+                height="30"
               />
             </span>
             <span className="ps-1">TEKSTİL</span>

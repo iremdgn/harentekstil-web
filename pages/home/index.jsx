@@ -10,7 +10,8 @@ import HomePageProductBottom from "/src/components/HomePageProductBottom";
 import { get } from "/src/services/request";
 import { apiConfig } from "/config";
 
-function HomePage() {
+function HomePage(props) {
+  const { setPreloader } = props;
   const [homePage, setHomePage] = useState(null);
 
   const getHomePageData = async () => {
@@ -46,6 +47,7 @@ function HomePage() {
     console.log("homePageResponse", response);
 
     if (response.status === 200) {
+      setPreloader(false);
       setHomePage(response.data.data.attributes);
     }
   };

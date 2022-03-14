@@ -19,6 +19,20 @@ a {
   --bs-gutter-x: 0 !important;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background: rgba(255, 255, 255, 1);
+  font-family: "Cormorant SC", serif;
+}
+.preloader .spinner-grow {
+  background-color: #f7a945;
+}
+
 .custom-ratio {
   position: relative;
 }
@@ -170,7 +184,7 @@ a {
   border: none !important;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .desktop-navbar {
     display: none !important;
   }
@@ -202,7 +216,8 @@ a {
 }
 
 .slider-text {
-  margin-left: 15rem;
+  margin-left: 24%;
+  margin-right: 40 px;
 }
 
 .line {
@@ -237,7 +252,7 @@ a {
   object-fit: cover;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .homepage-slider .row {
     margin: 0 !important;
     padding: 0 !important;
@@ -339,7 +354,7 @@ a {
   transform: scale(1.2);
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .product-card .card {
     width: 300px;
     height: 300px;
@@ -375,8 +390,9 @@ a {
 
 /* Product & Service*/
 
-.product-service {
-  height: 60vh;
+.product-service .product-service-image {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .product-service .mini-title {
@@ -406,7 +422,7 @@ a {
   padding: 5rem 20rem 5rem 7rem;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .product-service {
     height: 80%;
   }
@@ -459,7 +475,7 @@ a {
   color: #ffffff;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .homepage-contact {
     text-align: center;
   }
@@ -576,7 +592,7 @@ a {
   letter-spacing: 0.1rem;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .visual-card-large .card-img {
     height: 100%;
     object-fit: cover;
@@ -679,7 +695,7 @@ a {
   transform: scale(1.2);
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .home-bottom-product {
     padding: 4rem 0;
   }
@@ -746,7 +762,12 @@ a {
   object-fit: cover;
 }
 
-@media (340px <=width <=1337px) {
+.product-slider .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+@media (0 <=width <=1337px) {
   .slider-bottom {
     height: 55vh;
   }
@@ -800,11 +821,6 @@ a {
   background-color: #f6f6f4;
 }
 
-.product-slider .card-img-top {
-  height: 180px;
-  object-fit: cover;
-}
-
 .product-slider .card-title {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -820,18 +836,12 @@ a {
   top: -10px;
 }
 
-@media (340px <=width <=1337px) {
-  .product-slider {
-    height: 25vh;
-  }
-
+@media (0 <=width <=1337px) {
   .product-slider .swiper {
     width: 70%;
-    height: 100%;
   }
 
   .product-slider .swiper .card {
-    height: 90%;
   }
 
   .product-slider .card-title {
@@ -866,7 +876,7 @@ a {
   font-weight: 300;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .banner {
   }
 
@@ -930,13 +940,13 @@ a {
   background-size: cover;
 }
 
-@media (340px <=width <=884px) {
+@media (0 <=width <=884px) {
   .product-service .product-service-image {
     height: 35vh;
   }
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .jumbotron {
     padding: 100px 0;
   }
@@ -998,7 +1008,7 @@ a {
   font-size: 0.85rem;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .contact h1 {
     font-size: 2.5rem;
   }
@@ -1084,7 +1094,7 @@ a {
   height: 400px;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .single-product .gallery-top {
     width: 100%;
   }
@@ -1154,7 +1164,7 @@ a {
   background-color: #000000;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .blog .blog-text h1 {
     font-size: 2.5rem;
   }
@@ -1213,7 +1223,7 @@ a {
   color: #f6f6f4;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .bottom-banner {
     height: 60vh;
     background-size: cover;
@@ -1283,7 +1293,7 @@ a {
   bottom: 6rem;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .content-banner {
     height: 70vh;
     padding: 0 2rem;
@@ -1299,12 +1309,17 @@ a {
 }
 
 /** Blog Content Text **/
-
+.blogPostMain .content-banner {
+  background-repeat: no-repeat;
+  background-size: cover !important;
+}
+.blog-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .blog-content .blog-text {
-  width: 60vh;
   position: relative;
-  left: 30%;
-  padding: 5rem;
+  padding: 10rem 5rem 10rem 15% !important;
 }
 
 .blog-content .mini-title {
@@ -1323,7 +1338,7 @@ a {
   font-weight: 300;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .blog-content .blog-text {
     width: 100%;
     left: 0;
@@ -1363,7 +1378,7 @@ a {
   width: 38%;
 }
 
-@media (340px <=width <=1337px) {
+@media (0 <=width <=1337px) {
   .other-content {
     height: 50vh;
   }
