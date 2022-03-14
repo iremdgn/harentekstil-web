@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { apiConfig } from "/config";
 
 function Products(props) {
-  const { Category } = props;
+  const { Category, setPreloader } = props;
 
   return (
     <>
@@ -25,6 +25,7 @@ function Products(props) {
                       alt={item.Name}
                       title={item.Name}
                       text={item.subTitle}
+                      setPreloader={setPreloader}
                     />
                   )}
                 </Col>

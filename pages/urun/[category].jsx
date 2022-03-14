@@ -6,7 +6,8 @@ import { postNoToken } from "/src/services/request";
 
 import { apiConfig } from "/config";
 
-function Product() {
+function Product(props) {
+  const { setPreloader } = props;
   const router = useRouter();
   const [parentCat, setParentCat] = useState([]);
   const [childCat, setChildCat] = useState([]);
@@ -35,6 +36,7 @@ function Product() {
       setParentCat(response.data.parentCategory);
       setChildCat(response.data.childCategory);
       setProducts(response.data.products);
+      setPreloader(false);
     }
   };
 

@@ -68,7 +68,7 @@ function ProductsPage(props) {
             />
           )}
 
-          <Products Category={selectedCategory} />
+          <Products setPreloader={setPreloader} Category={selectedCategory} />
         </>
       )}
 
