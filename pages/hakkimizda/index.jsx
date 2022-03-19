@@ -5,10 +5,12 @@ import ProductService from "/src/components/ProductService";
 
 import { get } from "/src/services/request";
 import { apiConfig } from "/config";
+import SeoComponent from "../../src/components/Seo";
 
 function AboutPage(props) {
   const { setPreloader } = props;
   const [aboutPage, setAboutPage] = useState(null);
+  const [seo, setSeo] = useState();
 
   const getAboutPageData = async () => {
     const response = await get(apiConfig.api + "/api/about-page", {
@@ -22,11 +24,15 @@ function AboutPage(props) {
         "banner",
         "banner.image",
         "banner.image.media",
+        "seo",
+        "seo.metaImage.media",
+        "seo.metaSocial",
+        "seo.metaSocial.image.media",
       ],
     });
-    console.log(response);
     if (response.status === 200) {
       setAboutPage(response.data.data.attributes);
+      setSeo(response.data.data.attributes.seo);
       setPreloader(false);
     }
   };
@@ -38,6 +44,7 @@ function AboutPage(props) {
   return (
     aboutPage != null && (
       <>
+        {seo != null && <SeoComponent seo={seo} />}
         <Jumbotron
           imageUrl={
             apiConfig.api + aboutPage.jumbotron.image.data.attributes.url

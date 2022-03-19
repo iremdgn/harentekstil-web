@@ -9,11 +9,12 @@ import HomePageProductBottom from "/src/components/HomePageProductBottom";
 
 import { get } from "/src/services/request";
 import { apiConfig } from "/config";
+import SeoComponent from "../../src/components/Seo";
 
 function HomePage(props) {
   const { setPreloader } = props;
   const [homePage, setHomePage] = useState(null);
-
+  const [seo, setSeo] = useState();
   const getHomePageData = async () => {
     const response = await get(apiConfig.api + "/api/home-page", {
       populate: [
@@ -42,6 +43,10 @@ function HomePage(props) {
         "bottomProductList",
         "bottomProductList.image.media",
         "bottomProductList.image.image.media",
+        "seo",
+        "seo.metaImage.media",
+        "seo.metaSocial",
+        "seo.metaSocial.image.media",
       ],
     });
     console.log("homePageResponse", response);
@@ -49,6 +54,7 @@ function HomePage(props) {
     if (response.status === 200) {
       setPreloader(false);
       setHomePage(response.data.data.attributes);
+      setSeo(response.data.data.attributes.seo);
     }
   };
 
@@ -59,6 +65,7 @@ function HomePage(props) {
   return (
     homePage != null && (
       <>
+       {seo != null && <SeoComponent seo={seo} />}
         <HomePageSlider
           imageUrl={
             apiConfig.api +

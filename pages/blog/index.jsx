@@ -9,7 +9,6 @@ import { apiConfig } from "/config";
 function BlogPage(props) {
   const { setPreloader } = props;
   const [blogPage, setBlogPage] = useState(null);
-
   const [blogList, setBlogList] = useState(null);
 
   const getBlogJumbotron = async () => {
@@ -24,7 +23,7 @@ function BlogPage(props) {
   };
 
   const getBlogList = async () => {
-    const response = await get(apiConfig.api + "/api/blogs", {
+    const response = await get(apiConfig.api + "/api/blog-posts", {
       populate: ["featuredImage", "featuredImage.media"],
     });
     console.log("blogList", response);

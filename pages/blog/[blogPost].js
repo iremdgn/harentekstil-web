@@ -7,10 +7,12 @@ import { useRouter } from "next/router";
 
 import { postNoToken } from "/src/services/request";
 import { apiConfig } from "/config";
+import SeoComponent from "../../src/components/Seo";
 
 function BlogContentPage(props) {
   const { setPreloader } = props;
   const router = useRouter();
+  const [seo, setSeo] = useState();
 
   const [blogPost, setBlogPost] = useState(null);
 
@@ -22,6 +24,7 @@ function BlogContentPage(props) {
     console.log("responses", response);
     if (response.status === 200) {
       setBlogPost(response.data.blogPost[0]);
+      setSeo(response.data.blogPost[0].seo);
       setPreloader(false);
     }
   };
@@ -46,6 +49,7 @@ function BlogContentPage(props) {
   return (
     blogPost != null && (
       <div className="blogPostMain">
+        {seo != null && <SeoComponent seo={seo} />}
         <BlogContentBanner
           imageUrl={apiConfig.api + blogPost.jumbotronImage.url}
           title={blogPost.title}

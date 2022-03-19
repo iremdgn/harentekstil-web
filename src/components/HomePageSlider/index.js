@@ -11,9 +11,9 @@ function HomePageSlider(props) {
           <div>
             <hr className="line"></hr>
             <div className="slider-text py-2">
-              <h1 className="px-5 pt-3 fw-normal">{props.title}</h1>
-              <h1 className="px-5 fw-normal">{props.fistText}</h1>
-              <p className="ps-5 pt-2">{props.text}</p>
+              <h1 className="ps-xl-5 px-4 pt-3 fw-normal">{props.title}</h1>
+              <h2 className="px-5 fw-normal">{props.fistText}</h2>
+              <p className="ps-xl-5 px-4  pt-2">{props.text}</p>
             </div>
             <div className="swiper-area">
               <SwiperSlider
